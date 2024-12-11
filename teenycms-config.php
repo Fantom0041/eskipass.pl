@@ -9,20 +9,16 @@ define('LANG', 24); //na sztywno PL
 
 // ** MySQL settings ** //
 /** MySQL database name */
-define('DB_NAME', 'stage_epass2');
+define('DB_NAME', getenv('MYSQL_DATABASE') ?: 'stage_epass2');
 
 /** MySQL database username */
-define('DB_USER', 'stepass');
+define('DB_USER', getenv('MYSQL_USER') ?: 'stepass');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'plokKIJUHa19');
+define('DB_PASSWORD', getenv('MYSQL_PASSWORD') ?: 'plokKIJUHa19');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
-
-// ** Security settings ** //
-/** Salt */
-define('SALT', 'lk23j4987sg203)KP903(*&rl');
+define('DB_HOST', getenv('MYSQL_HOST') ?: 'localhost');
 
 /** teenyCMS Database Table prefix. */
 define('TABLE_PREFIX', 'ts_');

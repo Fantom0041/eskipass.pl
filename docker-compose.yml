@@ -21,9 +21,9 @@ services:
     user: "www-data:www-data"
     container_name: main_web_eskipass
     depends_on:
-      - main_php_epass
+      - main_php_eskipass
 
-  main_php_epass:
+  main_php_eskipass:
     networks:
       - epass2_network
     dns:
@@ -49,7 +49,7 @@ services:
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - SITE_URL=${SITE_URL}
     working_dir: /code
-    container_name: main_php_epass
+    container_name: main_php_eskipass
 
 networks:
   epass2_network:

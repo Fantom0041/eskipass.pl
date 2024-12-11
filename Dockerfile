@@ -25,7 +25,7 @@ RUN apt-get update && \
     libbz2-dev \
     libjpeg62-turbo-dev \
     libfreetype6-dev \
-    libzip-dev /home/kasjer/Documents/e-skipass.pl/docker-compose.yml\
+    libzip-dev \
     libcurl4-openssl-dev \
     pkg-config \
     libssl-dev \
