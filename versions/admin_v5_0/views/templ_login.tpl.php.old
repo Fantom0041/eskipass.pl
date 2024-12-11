@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{$siteName}} - Logowanie</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="Maniadmin">
+        <style type="text/css">
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <!--  styles -->
+         <!-- bootstrap css -->
+        <link href="{{$settings_dir}}css/bootstrap.min.css" rel="stylesheet">
+         <!-- base css -->
+        <link href="{{$settings_dir}}css/base.css" rel="stylesheet">
+         <!-- login page css -->
+        <link href="{{$settings_dir}}css/login.css" rel="stylesheet">
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!-- fav and touch icons -->
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row-fluid">
+
+                <div class='singin'  style='display:block;'>
+                    <div class="accounts-form">
+                        <h2>Zaloguj się na swoje konto</h2>
+                        <hr class="small">
+
+                        <form id="singup" class="clearfix" autocomplete="off" method="POST" action="">
+
+                            <div class="input">
+                                <input type="text" name="login" placeholder="{{$lang.login_l}}" id="login" required>
+                            </div>
+                            <div class="input">
+                                <input type="password" id="passwd" name="passwd" placeholder="{{$lang.login_p}}" required>
+                            </div>
+
+                            <div class="actions">
+                                <input type="submit" class="btn btn-success" value="Log in">
+                            </div>
+
+                        </form>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="{{$settings_dir}}js/jquery.min.js"></script>
+        <script src="{{$settings_dir}}js/bootstrap.min.js"></script>  
+    </body>
+</html>

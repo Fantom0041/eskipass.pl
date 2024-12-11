@@ -1,0 +1,407 @@
+.eskipass,
+.eskipass #wrapper,
+.eskipass #header,
+.eskipass #content,
+.eskipass .feature-box.media-box.fbox-bg .fbox-desc,
+.eskipass #header.sticky-header #header-wrap{
+    background-color: #fff;
+}
+.eskipass .content-wrap {
+    padding: 10px 0 80px;
+}
+.eskipass #template-contactform{
+    position: initial;
+}
+.eskipass .slider-col{
+    padding-right: 9px;
+}
+
+.eskipass .footer-logo{
+    max-width: 150px;
+}
+.eskipass .button.button-border{
+    color: #fff;
+}
+
+.eskipass .top-links li {
+    border-right: 1px solid #EEE;
+}
+
+.eskipass .top-links li:first-child {
+    border-left: 1px solid #EEE !important;
+}
+
+.eskipass #header {
+    border: none;
+}
+
+.eskipass .i-circled{
+    cursor: default;
+}
+
+.eskipass #primary-menu {
+    border: none;
+}
+
+.eskipass .feature-box.media-box.fbox-bg .fbox-media {
+    border: 1px solid #E5E5E5;
+}
+
+.eskipass .feature-box.media-box.fbox-bg .fbox-media img {
+    height: 100%;
+}
+
+.eskipass .feature-box.media-box.fbox-bg .fbox-desc {
+    min-height: 160px;
+}
+
+.eskipass .important-blocks img {
+    width: 100%;
+}
+
+.eskipass .important-blocks .bottommargin-sm {
+    margin-bottom: 24px !important;
+}
+
+.eskipass .promo.parallax {
+    background-size: cover;
+}
+
+.eskipass .background-opacity {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.eskipass #copyrights a:first-child{
+    margin-left: 10px;
+}
+.eskipass .boksy-filters {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.eskipass .boksy-filters #boksy-sort, .eskipass .boksy-filters #boksy-state {
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+.eskipass .boksy-filters #boksy-sort {
+    text-align: center;
+    cursor: pointer;
+}
+
+.eskipass .boksy-filters #boksy-state .label {
+    position: relative;
+    cursor: pointer;
+}
+
+.eskipass .boksy-filters #boksy-sort .icon {
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    font-size: 12px;
+}
+
+.eskipass .boksy-filters #boksy-state .icon {
+    right: -5px;
+    top: 6px;
+    font-size: 12px;
+}
+
+.eskipass .boksy-filters #boksy-state.collapsed .icon {
+    transform: rotate(180deg);
+}
+
+.eskipass .boksy-filters #boksy-sort:hover, .eskipass .boksy-filters #boksy-state .label:hover {
+    opacity: 0.7;
+}
+
+.eskipass .boksy-filters #boksy-sort .icon {
+    display: none;
+}
+
+.eskipass .boksy-filters #boksy-sort[data-dir=asc] .icon {
+    display: block;
+}
+
+.eskipass .boksy-filters #boksy-sort[data-dir=desc] .icon {
+    display: block;
+    transform: rotate(180deg);
+}
+
+.eskipass .boksy-filters #boksy-states-list {
+    display: none;
+    position: absolute;
+    left: 10px;
+    top: 25px;
+    z-index: 200;
+    list-style: none;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #eee;
+    border-top: none;
+}
+
+.eskipass .boksy-filters #boksy-states-list li {
+    font-size: 14px;
+    cursor: pointer;
+}
+.eskipass .flex-viewport{
+    transition: none;
+}
+
+.eskipass .boksy-filters #boksy-states-list li:hover {
+    text-decoration: underline;
+}
+
+.eskipass .boksy-filters #boksy-states-list li.selected {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.eskipass .boksy-filters #boksy-state #boksy-states-tabs {
+    display: inline-block;
+}
+
+.eskipass .boksy-filters #boksy-state #boksy-states-tabs .tab {
+    font-size: 14px;
+    margin-right: 25px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.eskipass .boksy-filters #boksy-state #boksy-states-tabs #boksy-states-clear-all.tab{
+    color: #C91212;
+    display: none;
+}
+
+.eskipass .boksy-filters #boksy-state #boksy-states-tabs #boksy-states-clear-all.tab:hover{
+    opacity: 0.7;
+}
+
+.eskipass .boksy-filters #boksy-state #boksy-states-tabs .tab:hover {
+    color: #C91212;
+}
+
+.eskipass .boksy-filters #boksy-state #boksy-states-tabs .tab .icon {
+    position: absolute;
+    top: -1px;
+    right: -20px;
+    font-size: 16px;
+    transform: rotate(0deg);
+}
+
+.eskipass .boks {
+    order: 1;
+}
+.eskipass .boks.show{
+    animation: showBoks 0.1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.eskipass .boks.hide{
+    animation: hideBoks 0.1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.eskipass .boksy-filters .icon-search{
+    transform: rotate(-90deg);
+    float: right;
+    font-weight: 700;
+    cursor: pointer;
+}
+.eskipass .boksy-filters .icon-search:hover{
+    opacity: 0.7;
+}
+.eskipass .boksy-filters #boksy-search{
+    display: none;
+    position: absolute;
+    right: 50px;
+    top: -5px;
+    width: 200px;
+    z-index: 200;
+}
+.eskipass .fbox-icon i:before{
+    margin: 0;
+}
+.eskipass .fancy-title.title-dotted-border{
+    background: url('/themes/eskipass/images/icons/dotted.png') repeat-x center;
+}
+
+.eskipass .pagecontainer2 h2{
+    margin-top: 20px;
+}
+.eskipass .pagecontainer2 .panel-heading{
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+.eskipass .pagecontainer2 .panel-heading a{
+    color: #444;
+}
+.eskipass .pagecontainer2 .panel-body{
+    padding: 0 17px;
+    margin: 10px 0;
+    border: 1px solid transparent;
+}
+.eskipass .return-message{
+    display: none;
+    position: absolute;
+    font-size: 16px;
+    width: 100%;
+    top: 10px;
+    z-index: 200
+}
+.eskipass .return-message > *{
+    position: absolute;
+    width: 300px;
+    left: calc(50% - 150px);
+    padding: 10px;
+}
+.eskipass .pagecontainer2 .lato.size30.slim{
+    display: none;
+}
+.eskipass .oc-item{
+    opacity: 0.5;
+}
+
+.eskipass a[data-toggle="collapse"] .icon-chevron-right{
+    font-size: 12px;
+}
+.eskipass a[data-toggle="collapse"].open .icon-chevron-right{
+    transform: rotate(90deg);
+}
+.eskipass .collapse:not(.show) {
+    display: block;
+    height: 0;
+    opacity: 0;
+    margin: 2px 0;
+    pointer-events: none;
+}
+.eskipass .collapsing{
+    opacity: 0.2;
+    transition: height 0.35s, opacity 0.35s, margin-top 0.15s, margin-bottom 0.15s;
+}
+@keyframes hideBoks {
+    0%{
+        flex-basis: 33.33%;
+        width: inherit;
+        height: inherit;
+        opacity: 1;
+    }
+    100%{
+        flex-basis: 0;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes showBoks {
+    0%{
+        flex-basis: 0;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    100%{
+        flex-basis: 33.33%;;
+        width: inherit;
+        height: inherit;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 992px){
+    .eskipass .hidden-md{
+        display: none !important;
+    }
+    .eskipass .boksy-filters #boksy-sort{
+        text-align: left;
+    }
+}
+@media (max-width: 768px) {
+    .eskipass .hidden-sm{
+        display: none !important;
+    }
+    .eskipass .feature-box.media-box.fbox-bg .fbox-media {
+        height: auto;
+    }
+
+    .eskipass .feature-box.media-box.fbox-bg .fbox-media img {
+        height: auto;
+    }
+
+    .eskipass #copyrights .col_half:last-child {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .eskipass #copyrights .col_half:last-child > div {
+        width: 100%;
+        border-top: 1px solid #333;
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    .eskipass #copyrights .col_half:last-child > div .social-icon {
+        float: none;
+        display: inline-block;
+    }
+    .eskipass #template-contactform{
+        margin-bottom: 20px !important;
+        text-align: center;
+    }
+    .eskipass #template-contactform div{
+        text-align: left;
+    }
+    .eskipass .custom-pages p{
+        margin-left: -30px;
+    }
+    .eskipass .custom-pages ol, .eskipass .custom-pages ul{
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 575.98px){
+    .eskipass .content-wrap{
+        padding-top: 0;
+    }
+    .eskipass .container,
+    .eskipass #header.full-header .container,
+    .eskipass .container-fullwidth {
+        padding: 0 15px !important;
+    }
+    .eskipass #header-wrap{
+        margin-top: -20px;
+    }
+    .eskipass .button.button-xlarge{
+        padding: 0 22px;
+        font-size: 17px;
+    }
+    .eskipass .copyrights-menu a{
+        font-size: 11px;
+        margin: 0px;
+    }
+    .eskipass .footer-logo{
+        margin-bottom: 0;
+    }
+    .eskipass .section{
+        padding: 0;
+        margin: 20px 0;
+    }
+    .eksipass .topmargin-lg{
+        margin-top: 40px;
+    }
+    .eksipass .bottommargin-lg{
+        margin-bottom: 40px;
+    }
+    .eskipass #boksy-search-input{
+        height: 30px;
+    }
+}

@@ -1,0 +1,12 @@
+Options -Indexes
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^([a-z0-9\-]+)/([a-z]+)$ admin.php?$1&a=$2 [QSA]
+RewriteRule ^([a-z0-9\-]+)$ admin.php?$1 [QSA]
+
+
+RewriteRule ^([a-z0-9\-]+)/([a-z0-9\-\/]+).html$ index.php?$1&params=$2 [QSA]
+RewriteRule ^([a-z0-9\-]+).html$ index.php?$1 [QSA]
+</IfModule>

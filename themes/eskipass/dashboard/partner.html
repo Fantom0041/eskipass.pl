@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Panel partnera - e-Skipass</title>
+	
+    <!-- Bootstrap -->
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="../assets/css/custom.css" rel="stylesheet" media="screen">
+    <link href="../assets/css/dashboard.css" rel="stylesheet" media="screen">
+
+    <!-- Carousel -->
+	<link href="../examples/carousel/carousel.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+      <script src="../assets/js/respond.min.js"></script>
+    <![endif]-->
+	
+    <!-- Fonts 
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400,300,300italic' rel='stylesheet' type='text/css'>	-->	
+	<!-- Font-Awesome -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css" media="screen" />
+    <!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="../assets/css/font-awesome-ie7.css" media="screen" /><![endif]-->
+	
+	<!-- PIECHART -->
+	<link rel="stylesheet" type="text/css" href="../assets/css/jquery.easy-pie-chart.css">
+	
+    <!-- Picker UI-->	
+	<link rel="stylesheet" href="../assets/css/jquery-ui.css" />		
+	
+    <!-- jQuery -->	
+    <script src="../assets/js/jquery.v2.0.3.js"></script>
+	
+
+
+	<style>
+	#wykreszamowienia {
+		width	: 100%;
+		height	: 500px;
+	}
+	#wykresportfel {
+		width	: 100%;
+		height	: 300px;
+	}  
+	</style>
+	
+  </head>
+  <body id="top">
+    
+	
+	
+	<!-- CONTENT -->
+	<div class="container2">
+
+		
+		<div class="container2 offset-0">
+			
+			
+			<!-- CONTENT -->
+			<div class="col-md-12  offset-0">
+				
+
+				
+				<!-- LEFT MENU -->
+				<div class="dashboard-left offset-0 textcenter">
+					
+					<br/><br/>
+					<a href="index.html"><img src="../images/dash/logo.png" alt=""/></a><br/>
+					<span class="size12 grey lh5">Witaj w panelu partnera</span><br/>
+					<a href="#"><img src="../images/dash/avatar.jpg" class="dash-avatar" alt=""/></a><br/>
+					<span class="size12 dark">Ryszard Zieleniec</span><br/>
+					<a href="#"><img src="../images/dash/logout.png" alt=""/></a><br/>
+					<br/><br/>
+					
+					<!-- Nav tabs -->
+					<ul class="nav dashboard-tabs">
+						<li class="active">
+						  <a href="partner.html">
+						  <div class="dash-ct">
+							  <span class="dashboard-icon left"></span>	
+							  <span class="dtxt">Pulpit</span>
+						  </div>
+						  </a></li>
+						  
+						<li class="dropdown">
+						  <a data-toggle="dropdown" class="dropdown-toggle" id="myTabDrop1" href="#">
+						  <div class="dash-ct">
+							  <span class="pages-icon left"></span>	
+							  <span class="dtxt">Zamówienia
+							  <b class="lightcaret "></b></span>
+						  </div>
+						  </a>
+						  <ul aria-labelledby="myTabDrop1" role="menu" class="dropdown-menu2 lftwidth">
+							<li><a href="order.html">Nowe zamówienie</a></li>
+							<li><a href="history.html">Lista zamówień</a></li>
+							<li><a href="#">Raporty</a></li>
+						  </ul></li>					
+						  
+						<li class="dropdown">
+						  <a data-toggle="dropdown" class="dropdown-toggle" id="myTabDrop2" href="#">
+						  <div class="dash-ct">
+							  <span class="profile-icon left"></span>	
+							  <span class="dtxt">Moje konto
+							  <b class="lightcaret "></b></span>
+						  </div>
+						  </a>
+						  <ul aria-labelledby="myTabDrop2" role="menu" class="dropdown-menu2 lftwidth">
+							<li><a href="#">Moje dane</a></li>
+							<li><a href="karty.html">Moje karty</a></li>
+						  </ul></li>					
+						  
+						  
+						  
+						
+					</ul>
+					<br/>
+					<span class="dtxt">
+						<span class="size12 grey">
+							Wszelkie prawa zastrzeżone &copy; 2015.<br/>
+							E-Skipass
+							</span>
+						<br/>
+						<br/>
+						<br/>
+					</span>
+					<div class="clearfix"></div>
+				</div>
+				<!-- LEFT MENU -->
+					
+				<!-- RIGHT CPNTENT -->
+				<div class="dashboard-right  offset-0">
+					<!-- Tab panes from left menu -->
+
+					
+					  <!-- TAB 1 -->
+					  <div class="cpadding40">
+					  
+						<span class="lato size12 grey">Dzień dobry <a href="#" class="orange">Ryszard Zieleniec</a></span>
+						<ul class="d-status">
+							<li class="popwidth"><a href="#" id="tasks" data-content="
+								<ul class='checklist3'>
+									<li>10:00 AM - Update to v2.0 <button type='button' class='close poscls' data-dismiss='alert' aria-hidden='true'>&times;</button></li>
+									<li>28.12.13 - Withdrawal - <b>$500.00</b> <button type='button' class='close poscls' data-dismiss='alert' aria-hidden='true'>&times;</button></li>
+									<li>Sent Email to <b>dave@gmail.com</b> <button type='button' class='close poscls' data-dismiss='alert' aria-hidden='true'>&times;</button></li>
+									<li>Recieved Email from <b>ana@yahoo.com</b><button type='button' class='close poscls' data-dismiss='alert' aria-hidden='true'>&times;</button></li>
+									<li>25.12.13 - Sent Christas Newsletter <button type='button' class='close poscls' data-dismiss='alert' aria-hidden='true'>&times;</button></li>
+									<li><b>Antony</b> booked 1 room's - New York <button type='button' class='close poscls' data-dismiss='alert' aria-hidden='true'>&times;</button></li>
+								</ul>
+								<div class='clearfix'></div>
+							" >Powiadomienia<span class="d-tas active">6</span></a></li>
+						</ul>
+						<div class="line2"></div>
+
+						<div class="alert alert-warning fade in margtop20">
+							<button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+							<strong>Notification!</strong> Best check yo self, you're not looking too good.
+						</div>
+
+					
+						<div class="row">
+							<div class="col-md-3">
+								<div class="dbox-visitors">
+									<div class="orangebox">
+										<a href="#"><img src="../images/dash/icon-visits.png" alt=""/></a>
+									</div>
+									<span class="size11 mt-5">Zamówienia z maja</span><br/>
+									<span class="countvisitors lato size24"></span>
+									<div class="clearfix"></div>
+									<div class="dboxarrow"></div>
+								</div>						
+							</div>
+							<div class="col-md-3">
+								<div class="dbox-visitors">
+									<div class="cyanbox">
+										<a href="#"><img src="../images/dash/icon-revenue.png" alt=""/></a>
+									</div>
+									<span class="size11 mt-5">Saldo wirtualnego portfela</span><br/>
+									<span class="lato size24">$<span class="countrevenue"></span></span>
+									<div class="clearfix"></div>	
+									<div class="dboxarrow"></div>									
+								</div>						
+							</div>
+							<div class="col-md-3">
+								<div class="dbox-visitors">
+									<div class="greenbox">
+										<a href="#"><img src="../images/dash/icon-email.png" alt=""/></a>
+									</div>
+									<span class="size11 mt-5">Powiadomienia</span><br/>
+									<span class="countemail lato size24">1</span>
+									<div class="clearfix"></div>
+									<div class="dboxarrow"></div>									
+								</div>						
+							</div>
+							<div class="col-md-3">
+								<div class="dbox-visitors">
+									<div class="darkbox">
+										<a href="#"><img src="../images/dash/icon-bookings.png" alt=""/></a>
+									</div>
+									<span class="size11 mt-5">Posiadane karty e-Skipass</span><br/>
+									<span class="countbookings lato size24">56</span>
+									<div class="clearfix"></div>	
+									<div class="dboxarrow"></div>									
+								</div>						
+							</div>
+						</div>
+
+						<div class="clearfix"></div>
+
+						<br/>
+						<span class="lato size18">Zamówienia (cały bieżący sezon)</span>
+						
+						
+						<div class="clearfix"></div>
+						<br/>
+						
+						<div id="wykreszamowienia"></div>
+						
+						<br/>
+						<div class="clearfix"></div><br/>						
+						
+						<span class="lato size18">Saldo wirtualnego portfela</span>
+						<div class="clearfix"></div>
+						
+						<div class="col-md-8 stats2container ohidden  offset-0">
+							<div id="wykresportfel"></div>
+						</div>
+						
+						<div class="col-md-4">
+							
+							<span class="lato size18">Ostatnie opreacje na portfelu</span><br/><br/>
+							<div class="table-responsive">
+							  <table class="table">
+								<tr class="active"><td>Chrome</td><td class="textright lblue">5,633</td></tr>
+								<tr class=""><td>Firefox</td><td class="textright lblue">3,274</td></tr>
+								<tr class="active"><td>Safari</td><td class="textright lblue">756</td></tr>
+								<tr class=""><td>Internet Explorer</td><td class="textright lblue">354</td></tr>
+								<tr class="active"><td>Opera</td><td class="textright lblue">105</td></tr>
+							  </table>
+							</div>
+							<a href="#" class="lato size12 lblue right">Więcej</a>
+							
+							
+							
+						</div>
+						
+						<div class="clearfix"></div><br/>
+						<div class="line2"></div><br/>
+								
+						
+					  </div>
+					  <!-- END OF TAB 1 -->		
+					  
+					  					  
+
+					
+				</div>
+				<!-- END OF RIGHT CPNTENT -->
+			
+			<div class="clearfix"></div><br/><br/>
+			</div>
+			<!-- END CONTENT -->			
+			
+
+			
+		</div>
+		
+		
+	</div>
+	<!-- END OF CONTENT -->
+	
+
+	
+	<div class="masternotice none">
+	 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	 Message from TitanicThemes
+	</div>
+	
+
+
+	
+    <!-- This page JS -->
+	<script src="../assets/js/js-index.js"></script>	
+	<script src="../assets/js/js-dashboard.js"></script>	
+		
+	<!-- Sparkline -->	
+	<script src="../assets/js/jquery.sparkline.js"></script>
+	
+    <!-- Custom functions -->
+    <script src="../assets/js/functions.js"></script>
+	
+    <!-- Counter -->	
+    <script src="../assets/js/counter.js"></script>		
+	
+    <!-- Picker UI-->	
+	<script src="../assets/js/jquery-ui.js"></script>		
+	
+	<!-- Easing -->
+    <script src="../assets/js/jquery.easing.js"></script>
+	
+    <!-- Nicescroll  -->	
+	<script src="../assets/js/jquery.nicescroll.min.js"></script>
+	
+    <!-- CarouFredSel -->
+    <script src="../assets/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+    <script src="../assets/js/helper-plugins/jquery.touchSwipe.min.js"></script>
+	<script type="text/javascript" src="../assets/js/helper-plugins/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="../assets/js/helper-plugins/jquery.transit.min.js"></script>
+	<script type="text/javascript" src="../assets/js/helper-plugins/jquery.ba-throttle-debounce.min.js"></script>
+	
+    <!-- Custom Select -->
+	<script type='text/javascript' src='../assets/js/jquery.customSelect.js'></script>	
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../dist/js/bootstrap.min.js"></script>
+    
+    
+    <script src="http://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="http://www.amcharts.com/lib/3/serial.js"></script>
+    <script src="http://www.amcharts.com/lib/3/themes/light.js"></script>
+    
+    
+    <script>
+    var chart = AmCharts.makeChart("wykreszamowienia", {
+    "type": "serial",
+    "theme": "light",
+    "marginRight": 80,
+    "autoMarginOffset": 20,
+    "path": "http://www.amcharts.com/lib/3/",
+    "dataDateFormat": "YYYY-MM-DD",
+    "valueAxes": [{
+        "id": "v1",
+        "axisAlpha": 0,
+        "position": "left"
+    }],
+    "balloon": {
+        "borderThickness": 1,
+        "shadowAlpha": 0
+    },
+    "graphs": [{
+        "id": "g1",
+        "bullet": "round",
+        "bulletBorderAlpha": 1,
+        "bulletColor": "#FFFFFF",
+        "bulletSize": 5,
+        "hideBulletsCount": 50,
+        "lineThickness": 2,
+        "title": "red line",
+        "useLineColorForBulletBorder": true,
+        "valueField": "value",
+        "balloonText": "<div style='margin:5px; font-size:19px;'><span style='font-size:13px;'>[[category]]</span><br>[[value]]</div>"
+    }],
+    "chartScrollbar": {
+        "graph": "g1",
+        "scrollbarHeight": 80,
+        "backgroundAlpha": 0,
+        "selectedBackgroundAlpha": 0.1,
+        "selectedBackgroundColor": "#888888",
+        "graphFillAlpha": 0,
+        "graphLineAlpha": 0.5,
+        "selectedGraphFillAlpha": 0,
+        "selectedGraphLineAlpha": 1,
+        "autoGridCount":true,
+        "color":"#AAAAAA"
+    },
+    "chartCursor": {
+        "pan": true,
+        "valueLineEnabled": true,
+        "valueLineBalloonEnabled": true,
+        "cursorAlpha":0,
+        "valueLineAlpha":0.2
+    },
+    "categoryField": "date",
+    "categoryAxis": {
+        "parseDates": true,
+        "dashLength": 1,
+        "minorGridEnabled": true,
+        "position": "top"
+    },
+    "export": {
+        "enabled": true
+    },
+    "dataProvider": [{
+        "date": "2012-07-27",
+        "value": 13
+    }, {
+        "date": "2012-07-28",
+        "value": 11
+    }, {
+        "date": "2012-07-29",
+        "value": 15
+    }, {
+        "date": "2012-07-30",
+        "value": 16
+    }, {
+        "date": "2012-07-31",
+        "value": 18
+    }, {
+        "date": "2012-08-01",
+        "value": 13
+    }, {
+        "date": "2012-08-02",
+        "value": 22
+    }, {
+        "date": "2012-08-03",
+        "value": 23
+    }, {
+        "date": "2012-08-04",
+        "value": 20
+    }, {
+        "date": "2012-08-05",
+        "value": 17
+    }, {
+        "date": "2012-08-06",
+        "value": 16
+    }, {
+        "date": "2012-08-07",
+        "value": 18
+    }, {
+        "date": "2012-08-08",
+        "value": 21
+    }, {
+        "date": "2012-08-09",
+        "value": 26
+    }, {
+        "date": "2012-08-10",
+        "value": 24
+    }, {
+        "date": "2012-08-11",
+        "value": 29
+    }, {
+        "date": "2012-08-12",
+        "value": 32
+    }, {
+        "date": "2012-08-13",
+        "value": 18
+    }, {
+        "date": "2012-08-14",
+        "value": 24
+    }, {
+        "date": "2012-08-15",
+        "value": 22
+    }, {
+        "date": "2012-08-16",
+        "value": 18
+    }, {
+        "date": "2012-08-17",
+        "value": 19
+    }, {
+        "date": "2012-08-18",
+        "value": 14
+    }, {
+        "date": "2012-08-19",
+        "value": 15
+    }, {
+        "date": "2012-08-20",
+        "value": 12
+    }, {
+        "date": "2012-08-21",
+        "value": 8
+    }, {
+        "date": "2012-08-22",
+        "value": 9
+    }, {
+        "date": "2012-08-23",
+        "value": 8
+    }, {
+        "date": "2012-08-24",
+        "value": 7
+    }, {
+        "date": "2012-08-25",
+        "value": 5
+    }, {
+        "date": "2012-08-26",
+        "value": 11
+    }, {
+        "date": "2012-08-27",
+        "value": 13
+    }, {
+        "date": "2012-08-28",
+        "value": 18
+    }, {
+        "date": "2012-08-29",
+        "value": 20
+    }, {
+        "date": "2012-08-30",
+        "value": 29
+    }, {
+        "date": "2012-08-31",
+        "value": 33
+    }, {
+        "date": "2012-09-01",
+        "value": 42
+    }, {
+        "date": "2012-09-02",
+        "value": 35
+    }, {
+        "date": "2012-09-03",
+        "value": 31
+    }, {
+        "date": "2012-09-04",
+        "value": 47
+    }, {
+        "date": "2012-09-05",
+        "value": 52
+    }, {
+        "date": "2012-09-06",
+        "value": 46
+    }, {
+        "date": "2012-09-07",
+        "value": 41
+    }, {
+        "date": "2012-09-08",
+        "value": 43
+    }, {
+        "date": "2012-09-09",
+        "value": 40
+    }, {
+        "date": "2012-09-10",
+        "value": 39
+    }, {
+        "date": "2012-09-11",
+        "value": 34
+    }, {
+        "date": "2012-09-12",
+        "value": 29
+    }, {
+        "date": "2012-09-13",
+        "value": 34
+    }, {
+        "date": "2012-09-14",
+        "value": 37
+    }, {
+        "date": "2012-09-15",
+        "value": 42
+    }, {
+        "date": "2012-09-16",
+        "value": 49
+    }, {
+        "date": "2012-09-17",
+        "value": 46
+    }, {
+        "date": "2012-09-18",
+        "value": 47
+    }, {
+        "date": "2012-09-19",
+        "value": 55
+    }, {
+        "date": "2012-09-20",
+        "value": 59
+    }, {
+        "date": "2012-09-21",
+        "value": 58
+    }, {
+        "date": "2012-09-22",
+        "value": 57
+    }, {
+        "date": "2012-09-23",
+        "value": 61
+    }, {
+        "date": "2012-09-24",
+        "value": 59
+    }, {
+        "date": "2012-09-25",
+        "value": 67
+    }, {
+        "date": "2012-09-26",
+        "value": 65
+    }, {
+        "date": "2012-09-27",
+        "value": 61
+    }, {
+        "date": "2012-09-28",
+        "value": 66
+    }, {
+        "date": "2012-09-29",
+        "value": 69
+    }, {
+        "date": "2012-09-30",
+        "value": 71
+    }, {
+        "date": "2012-10-01",
+        "value": 67
+    }, {
+        "date": "2012-10-02",
+        "value": 63
+    }, {
+        "date": "2012-10-03",
+        "value": 46
+    }, {
+        "date": "2012-10-04",
+        "value": 32
+    }, {
+        "date": "2012-10-05",
+        "value": 21
+    }, {
+        "date": "2012-10-06",
+        "value": 18
+    }, {
+        "date": "2012-10-07",
+        "value": 21
+    }, {
+        "date": "2012-10-08",
+        "value": 28
+    }, {
+        "date": "2012-10-09",
+        "value": 27
+    }, {
+        "date": "2012-10-10",
+        "value": 36
+    }, {
+        "date": "2012-10-11",
+        "value": 33
+    }, {
+        "date": "2012-10-12",
+        "value": 31
+    }, {
+        "date": "2012-10-13",
+        "value": 30
+    }, {
+        "date": "2012-10-14",
+        "value": 34
+    }, {
+        "date": "2012-10-15",
+        "value": 38
+    }, {
+        "date": "2012-10-16",
+        "value": 37
+    }, {
+        "date": "2012-10-17",
+        "value": 44
+    }, {
+        "date": "2012-10-18",
+        "value": 49
+    }, {
+        "date": "2012-10-19",
+        "value": 53
+    }, {
+        "date": "2012-10-20",
+        "value": 57
+    }, {
+        "date": "2012-10-21",
+        "value": 60
+    }, {
+        "date": "2012-10-22",
+        "value": 61
+    }, {
+        "date": "2012-10-23",
+        "value": 69
+    }, {
+        "date": "2012-10-24",
+        "value": 67
+    }, {
+        "date": "2012-10-25",
+        "value": 72
+    }, {
+        "date": "2012-10-26",
+        "value": 77
+    }, {
+        "date": "2012-10-27",
+        "value": 75
+    }, {
+        "date": "2012-10-28",
+        "value": 70
+    }, {
+        "date": "2012-10-29",
+        "value": 72
+    }, {
+        "date": "2012-10-30",
+        "value": 70
+    }, {
+        "date": "2012-10-31",
+        "value": 72
+    }, {
+        "date": "2012-11-01",
+        "value": 73
+    }, {
+        "date": "2012-11-02",
+        "value": 67
+    }, {
+        "date": "2012-11-03",
+        "value": 68
+    }, {
+        "date": "2012-11-04",
+        "value": 65
+    }, {
+        "date": "2012-11-05",
+        "value": 71
+    }, {
+        "date": "2012-11-06",
+        "value": 75
+    }, {
+        "date": "2012-11-07",
+        "value": 74
+    }, {
+        "date": "2012-11-08",
+        "value": 71
+    }, {
+        "date": "2012-11-09",
+        "value": 76
+    }, {
+        "date": "2012-11-10",
+        "value": 77
+    }, {
+        "date": "2012-11-11",
+        "value": 81
+    }, {
+        "date": "2012-11-12",
+        "value": 83
+    }, {
+        "date": "2012-11-13",
+        "value": 80
+    }, {
+        "date": "2012-11-14",
+        "value": 81
+    }, {
+        "date": "2012-11-15",
+        "value": 87
+    }, {
+        "date": "2012-11-16",
+        "value": 82
+    }, {
+        "date": "2012-11-17",
+        "value": 86
+    }, {
+        "date": "2012-11-18",
+        "value": 80
+    }, {
+        "date": "2012-11-19",
+        "value": 87
+    }, {
+        "date": "2012-11-20",
+        "value": 83
+    }, {
+        "date": "2012-11-21",
+        "value": 85
+    }, {
+        "date": "2012-11-22",
+        "value": 84
+    }, {
+        "date": "2012-11-23",
+        "value": 82
+    }, {
+        "date": "2012-11-24",
+        "value": 73
+    }, {
+        "date": "2012-11-25",
+        "value": 71
+    }, {
+        "date": "2012-11-26",
+        "value": 75
+    }, {
+        "date": "2012-11-27",
+        "value": 79
+    }, {
+        "date": "2012-11-28",
+        "value": 70
+    }, {
+        "date": "2012-11-29",
+        "value": 73
+    }, {
+        "date": "2012-11-30",
+        "value": 61
+    }, {
+        "date": "2012-12-01",
+        "value": 62
+    }, {
+        "date": "2012-12-02",
+        "value": 66
+    }, {
+        "date": "2012-12-03",
+        "value": 65
+    }, {
+        "date": "2012-12-04",
+        "value": 73
+    }, {
+        "date": "2012-12-05",
+        "value": 79
+    }, {
+        "date": "2012-12-06",
+        "value": 78
+    }, {
+        "date": "2012-12-07",
+        "value": 78
+    }, {
+        "date": "2012-12-08",
+        "value": 78
+    }, {
+        "date": "2012-12-09",
+        "value": 74
+    }, {
+        "date": "2012-12-10",
+        "value": 73
+    }, {
+        "date": "2012-12-11",
+        "value": 75
+    }, {
+        "date": "2012-12-12",
+        "value": 70
+    }, {
+        "date": "2012-12-13",
+        "value": 77
+    }, {
+        "date": "2012-12-14",
+        "value": 67
+    }, {
+        "date": "2012-12-15",
+        "value": 62
+    }, {
+        "date": "2012-12-16",
+        "value": 64
+    }, {
+        "date": "2012-12-17",
+        "value": 61
+    }, {
+        "date": "2012-12-18",
+        "value": 59
+    }, {
+        "date": "2012-12-19",
+        "value": 53
+    }, {
+        "date": "2012-12-20",
+        "value": 54
+    }, {
+        "date": "2012-12-21",
+        "value": 56
+    }, {
+        "date": "2012-12-22",
+        "value": 59
+    }, {
+        "date": "2012-12-23",
+        "value": 58
+    }, {
+        "date": "2012-12-24",
+        "value": 55
+    }, {
+        "date": "2012-12-25",
+        "value": 52
+    }, {
+        "date": "2012-12-26",
+        "value": 54
+    }, {
+        "date": "2012-12-27",
+        "value": 50
+    }, {
+        "date": "2012-12-28",
+        "value": 50
+    }, {
+        "date": "2012-12-29",
+        "value": 51
+    }, {
+        "date": "2012-12-30",
+        "value": 52
+    }, {
+        "date": "2012-12-31",
+        "value": 58
+    }, {
+        "date": "2013-01-01",
+        "value": 60
+    }, {
+        "date": "2013-01-02",
+        "value": 67
+    }, {
+        "date": "2013-01-03",
+        "value": 64
+    }, {
+        "date": "2013-01-04",
+        "value": 66
+    }, {
+        "date": "2013-01-05",
+        "value": 60
+    }, {
+        "date": "2013-01-06",
+        "value": 63
+    }, {
+        "date": "2013-01-07",
+        "value": 61
+    }, {
+        "date": "2013-01-08",
+        "value": 60
+    }, {
+        "date": "2013-01-09",
+        "value": 65
+    }, {
+        "date": "2013-01-10",
+        "value": 75
+    }, {
+        "date": "2013-01-11",
+        "value": 77
+    }, {
+        "date": "2013-01-12",
+        "value": 78
+    }, {
+        "date": "2013-01-13",
+        "value": 70
+    }, {
+        "date": "2013-01-14",
+        "value": 70
+    }, {
+        "date": "2013-01-15",
+        "value": 73
+    }, {
+        "date": "2013-01-16",
+        "value": 71
+    }, {
+        "date": "2013-01-17",
+        "value": 74
+    }, {
+        "date": "2013-01-18",
+        "value": 78
+    }, {
+        "date": "2013-01-19",
+        "value": 85
+    }, {
+        "date": "2013-01-20",
+        "value": 82
+    }, {
+        "date": "2013-01-21",
+        "value": 83
+    }, {
+        "date": "2013-01-22",
+        "value": 88
+    }, {
+        "date": "2013-01-23",
+        "value": 85
+    }, {
+        "date": "2013-01-24",
+        "value": 85
+    }, {
+        "date": "2013-01-25",
+        "value": 80
+    }, {
+        "date": "2013-01-26",
+        "value": 87
+    }, {
+        "date": "2013-01-27",
+        "value": 84
+    }, {
+        "date": "2013-01-28",
+        "value": 83
+    }, {
+        "date": "2013-01-29",
+        "value": 84
+    }, {
+        "date": "2013-01-30",
+        "value": 81
+    }]
+});
+
+chart.addListener("rendered", zoomChart);
+
+zoomChart();
+
+function zoomChart() {
+    chart.zoomToIndexes(chart.dataProvider.length - 40, chart.dataProvider.length - 1);
+}
+
+
+
+
+// generate data
+var chartData = [];
+
+function generateChartData() {
+    var firstDate = new Date();
+    firstDate.setTime(firstDate.getTime() - 10 * 24 * 60 * 60 * 1000);
+
+    for (var i = firstDate.getTime(); i < (firstDate.getTime() + 10 * 24 * 60 * 60 * 1000); i += 60 * 60 * 1000) {
+        var newDate = new Date(i);
+
+        if (i == firstDate.getTime()) {
+            var value1 = Math.round(Math.random() * 10) + 1;
+        } else {
+            var value1 = Math.round(chartData[chartData.length - 1].value1 / 100 * (90 + Math.round(Math.random() * 20)) * 100) / 100;
+        }
+
+        if (newDate.getHours() == 12) {
+            // we set daily data on 12th hour only
+            var value2 = Math.round(Math.random() * 12) + 1;
+            chartData.push({
+                date: newDate,
+                value1: value1,
+                value2: value2
+            });
+        } else {
+            chartData.push({
+                date: newDate,
+                value1: value1
+            });
+        }
+    }
+}
+
+generateChartData();
+
+var chart2 = AmCharts.makeChart("wykresportfel", {
+    "type": "serial",
+    "theme": "light",
+    "marginRight": 80,
+    "path": "http://www.amcharts.com/lib/3/",
+    "dataProvider": chartData,
+    "valueAxes": [{
+        "axisAlpha": 0.1
+    }],
+
+    "graphs": [{
+        "balloonText": "[[title]]: [[value]]",
+        "columnWidth": 20,
+        "fillAlphas": 1,
+        "title": "daily",
+        "type": "column",
+        "valueField": "value2"
+    }, {
+        "balloonText": "[[title]]: [[value]]",
+        "lineThickness": 2,
+        "title": "intra-day",
+        "valueField": "value1"
+    }],
+    "zoomOutButtonRollOverAlpha": 0.15,
+    "chartCursor": {
+        "categoryBalloonDateFormat": "MMM DD JJ:NN",
+        "cursorPosition": "mouse",
+        "showNextAvailable": true
+    },
+    "autoMarginOffset": 5,
+    "columnWidth": 1,
+    "categoryField": "date",
+    "categoryAxis": {
+        "minPeriod": "hh",
+        "parseDates": true
+    },
+    "export": {
+        "enabled": true
+    }
+});
+
+    </script>
+  </body>
+</html>

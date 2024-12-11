@@ -1,0 +1,25 @@
+.blackbg { 
+    background-color: rgba(0,0,0,0.5) !important; 
+    padding:10px 20px !important; 
+}
+
+.ptopnoslider {
+    background: #fff;
+    margin-top: 110px;
+    position: relative;
+    z-index: 100;
+    display: block;
+}
+
+.kodpromocyjnyinput {
+    padding: 10px 40px;
+    text-align:center;
+    border:1px dashed #bbb;
+}
+
+.centered-content,
+.centered-content p {
+    text-align: center;
+}
+  
+  

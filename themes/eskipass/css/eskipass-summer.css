@@ -1,0 +1,40 @@
+.eskipass.summer #primary-menu ul li:hover > a,
+.eskipass.summer #primary-menu ul li.current > a,
+.eskipass.summer .header-extras li .he-text span,
+.eskipass.summer h1 > span:not(.nocolor):not(.badge),
+.eskipass.summer h2 > span:not(.nocolor):not(.badge),
+.eskipass.summer h3 > span:not(.nocolor):not(.badge),
+.eskipass.summer h4 > span:not(.nocolor):not(.badge),
+.eskipass.summer h5 > span:not(.nocolor):not(.badge),
+.eskipass.summer h6 > span:not(.nocolor):not(.badge),
+.eskipass.summer .contact .fbox-icon i,
+.eskipass.summer .i-plain,
+.eskipass.summer .pagecontainer2 .panel-heading a:hover,
+.eskipass.summer .pagecontainer2 .panel-heading a.open {
+    color: #28a745 !important;
+}
+
+.eskipass.summer .button,
+.eskipass.summer .btn-secondary {
+    background-color: #28a745;
+    border-color: #28a745;;
+    color: white;
+}
+
+.eskipass.summer .feature-box .fbox-icon i,
+.eskipass.summer .feature-box .fbox-icon img,
+.eskipass.summer *::selection {
+    background-color: #28a745;
+}
+
+.eskipass.summer a {
+    color: #28a745;
+}
+@media (max-width: 991px) {
+    body.eskipass.summer #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li:hover a,
+    body.eskipass.summer #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li.current a,
+    body.eskipass.summer #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li:hover a,
+    body.eskipass.summer #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.current a {
+        color: #28a745 !important;
+    }
+}

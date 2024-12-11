@@ -1,0 +1,40 @@
+.eskipass.winter #primary-menu ul li:hover > a,
+.eskipass.winter #primary-menu ul li.current > a,
+.eskipass.winter .header-extras li .he-text span,
+.eskipass.winter h1 > span:not(.nocolor):not(.badge),
+.eskipass.winter h2 > span:not(.nocolor):not(.badge),
+.eskipass.winter h3 > span:not(.nocolor):not(.badge),
+.eskipass.winter h4 > span:not(.nocolor):not(.badge),
+.eskipass.winter h5 > span:not(.nocolor):not(.badge),
+.eskipass.winter h6 > span:not(.nocolor):not(.badge),
+.eskipass.winter .contact .fbox-icon i,
+.eskipass.winter .i-plain,
+.eskipass.winter .pagecontainer2 .panel-heading a:hover,
+.eskipass.winter .pagecontainer2 .panel-heading a.open {
+    color: #0895fe !important;
+}
+
+.eskipass.winter .button,
+.eskipass.winter .btn-secondary {
+    background-color: #0895fe;
+    border-color: #0895fe;
+    color: white;
+}
+
+.eskipass.winter .feature-box .fbox-icon i,
+.eskipass.winter .feature-box .fbox-icon img,
+.eskipass.winter *::selection {
+    background-color: #0895fe;
+}
+
+.eskipass.winter a{
+    color: #0895fe;
+}
+@media (max-width: 991px) {
+    body.eskipass.winter #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li:hover a,
+    body.eskipass.winter #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li.current a,
+    body.eskipass.winter #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li:hover a,
+    body.eskipass.winter #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.current a {
+        color: #0895fe !important;
+    }
+}

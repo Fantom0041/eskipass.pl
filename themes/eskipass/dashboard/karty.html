@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Panel partnera - e-Skipass</title>
+	
+    <!-- Bootstrap -->
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="../assets/css/custom.css" rel="stylesheet" media="screen">
+    <link href="../assets/css/dashboard.css" rel="stylesheet" media="screen">
+    
+    <!-- Updates -->
+    <link href="../updates/update1/css/style01.css" rel="stylesheet" media="screen">
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.css">
+    <!-- Carousel -->
+	<link href="../examples/carousel/carousel.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+      <script src="../assets/js/respond.min.js"></script>
+    <![endif]-->
+	
+    <!-- Fonts 
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400,300,300italic' rel='stylesheet' type='text/css'>	-->	
+	<!-- Font-Awesome -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css" media="screen" />
+    <!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="../assets/css/font-awesome-ie7.css" media="screen" /><![endif]-->
+	
+	
+	
+	
+	
+    <!-- jQuery -->	
+    <script src="../assets/js/jquery.v2.0.3.js"></script>
+	
+
+
+	<style>
+	#wykreszamowienia {
+		width	: 100%;
+		height	: 500px;
+	}
+	#wykresportfel {
+		width	: 100%;
+		height	: 300px;
+	}  
+	</style>
+	
+  </head>
+  <body id="top">
+    
+	
+	
+	<!-- CONTENT -->
+	<div class="container2">
+
+		
+		<div class="container2 offset-0">
+			
+			
+			<!-- CONTENT -->
+			<div class="col-md-12  offset-0">
+				
+
+				
+				<!-- LEFT MENU -->
+				<div class="dashboard-left offset-0 textcenter">
+					
+					<br/><br/>
+					<a href="index.html"><img src="../images/dash/logo.png" alt=""/></a><br/>
+					<span class="size12 grey lh5">Witaj w panelu partnera</span><br/>
+					<a href="#"><img src="../images/dash/avatar.jpg" class="dash-avatar" alt=""/></a><br/>
+					<span class="size12 dark">Ryszard Zieleniec</span><br/>
+					<a href="#"><img src="../images/dash/logout.png" alt=""/></a><br/>
+					<br/><br/>
+					
+					<!-- Nav tabs -->
+					<ul class="nav dashboard-tabs">
+						<li>
+						  <a href="partner.html">
+						  <div class="dash-ct">
+							  <span class="dashboard-icon left"></span>	
+							  <span class="dtxt">Pulpit</span>
+						  </div>
+						  </a></li>
+						  
+						<li class="dropdown">
+						  <a data-toggle="dropdown" class="dropdown-toggle" id="myTabDrop1" href="#">
+						  <div class="dash-ct">
+							  <span class="pages-icon left"></span>	
+							  <span class="dtxt">Zamówienia
+							  <b class="lightcaret "></b></span>
+						  </div>
+						  </a>
+						  <ul aria-labelledby="myTabDrop1" role="menu" class="dropdown-menu2 lftwidth">
+							<li><a href="order.html">Nowe zamówienie</a></li>
+							<li><a href="history.html">Lista zamówień</a></li>
+							<li><a href="#">Raporty</a></li>
+						  </ul></li>					
+						  
+						<li class="dropdown">
+						  <a data-toggle="dropdown" class="dropdown-toggle" id="myTabDrop2" href="#">
+						  <div class="dash-ct">
+							  <span class="profile-icon left"></span>	
+							  <span class="dtxt">Moje konto
+							  <b class="lightcaret "></b></span>
+						  </div>
+						  </a>
+						  <ul aria-labelledby="myTabDrop2" role="menu" class="dropdown-menu2 lftwidth active">
+							<li><a href="#">Moje dane</a></li>
+							<li class="active"><a href="karty.html">Moje karty</a></li>
+						  </ul></li>					
+						  
+						  
+						  
+						
+					</ul>
+					<br/>
+					<span class="dtxt">
+						<span class="size12 grey">
+							Wszelkie prawa zastrzeżone &copy; 2015.<br/>
+							E-Skipass
+							</span>
+						<br/>
+						<br/>
+						<br/>
+					</span>
+					<div class="clearfix"></div>
+				</div>
+				<!-- LEFT MENU -->
+					
+				<!-- RIGHT CPNTENT -->
+				<div class="dashboard-right  offset-0">
+					<!-- Tab panes from left menu -->
+
+					
+					  <!-- TAB 1 -->
+					  <div class="cpadding40">
+					  
+						<span class="lato size12 grey">Dzień dobry <a href="#" class="orange">Ryszard Zieleniec</a></span>
+						<ul class="d-status">
+							<li class="popwidth"><a href="#" id="tasks" data-content="
+								<ul class='checklist3'>
+									<li>10:00 AM - Update to v2.0 <button type='button' class='close poscls' data-dismiss='alert' aria-hidden='true'>&times;</button></li>
+									<li>28.12.13 - Withdrawal - <b>$500.00</b> <button type='button' class='close poscls' data-dismiss='alert' aria-hidden='true'>&times;</button></li>
+									<li>Sent Email to <b>dave@gmail.com</b> <button type='button' class='close poscls' data-dismiss='alert' aria-hidden='true'>&times;</button></li>
+									<li>Recieved Email from <b>ana@yahoo.com</b><button type='button' class='close poscls' data-dismiss='alert' aria-hidden='true'>&times;</button></li>
+									<li>25.12.13 - Sent Christas Newsletter <button type='button' class='close poscls' data-dismiss='alert' aria-hidden='true'>&times;</button></li>
+									<li><b>Antony</b> booked 1 room's - New York <button type='button' class='close poscls' data-dismiss='alert' aria-hidden='true'>&times;</button></li>
+								</ul>
+								<div class='clearfix'></div>
+							" >Powiadomienia<span class="d-tas active">6</span></a></li>
+						</ul>
+						<div class="line2"></div>
+
+						<div class="alert alert-warning fade in margtop20">
+							<button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+							<strong>Notification!</strong> Best check yo self, you're not looking too good.
+						</div>
+
+					
+						<div class="row">
+							<div class="col-md-12">
+								<h1>Moje karty e-Skipass</h1>
+							</div>
+						</div>
+						
+
+						<div class="row">
+									<div class="col-md-3">
+										
+										
+												<span class="size13"><b>Data rozpoczęcia</b></span>
+												<input type="text" class="form-control"  placeholder="numer karty">
+										
+										
+									</div>
+									<div class="col-md-3">
+										<span class="size13"><b>&nbsp;</b></span><br>
+										<button class="btn-search4">Szukaj</button>
+									</div>
+									<div class="col-md-6">
+									</div>
+						</div>
+
+						<div class="clearfix"></div>
+
+						
+						<div class="line2"></div><br/>
+						
+						<div class="row">
+							<div class="col-md-12">
+							
+							<table class="table table-striped">
+							  <thead>
+							    <tr>
+							      <th>Wizerunek</th>
+							      <th>Numer</th>
+							      <th>Data utworzenia</th>
+							      <th>Opis</th>
+							      <th>Aktywne karnety</th>
+							      <th>Akcja</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <td><img src="../images/dash/eskipass_karta2.jpg" width="100"></td>
+							      <td>123133132113</td>
+							      <td>2015-05-01 12:33</td>
+							      <td>Karta Mmietka</td>
+							      <td>Tak</td>
+							      <td><a href="" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="szczegóły"><i class="glyphicon glyphicon-file"></i></a></td>
+							    </tr>
+							    <tr>
+							      <td><img src="../images/dash/eskipass_karta2.jpg" width="100"></td>
+							      <td>123133132113</td>
+							      <td>2015-05-01 12:33</td>
+							      <td>Karta Mmietka</td>
+							      <td>Tak</td>
+							      <td><a href="" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="szczegóły"><i class="glyphicon glyphicon-file"></i></a></td>
+							    </tr>
+							    <tr>
+							      <td><img src="../images/dash/eskipass_karta2.jpg" width="100"></td>
+							      <td>123133132113</td>
+							      <td>2015-05-01 12:33</td>
+							      <td>Karta Mmietka</td>
+							      <td>Nie</td>
+							      <td><a href="" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="szczegóły"><i class="glyphicon glyphicon-file"></i></a></td>
+							    </tr>
+							    <tr>
+							      <td><img src="../images/dash/eskipass_karta2.jpg" width="100"></td>
+							      <td>123133132113</td>
+							      <td>2015-05-01 12:33</td>
+							      <td>Karta Mmietka</td>
+							      <td>Tak</td>
+							      <td><a href="" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="szczegóły"><i class="glyphicon glyphicon-file"></i></a></td>
+							    </tr>
+							    <tr>
+							      <td><img src="../images/dash/eskipass_karta2.jpg" width="100"></td>
+							      <td>123133132113</td>
+							      <td>2015-05-01 12:33</td>
+							      <td>Karta Mmietka</td>
+							      <td>Tak</td>
+							      <td><a href="" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="szczegóły"><i class="glyphicon glyphicon-file"></i></a></td>
+							    </tr>
+							    <tr>
+							      <td><img src="../images/dash/eskipass_karta2.jpg" width="100"></td>
+							      <td>123133132113</td>
+							      <td>2015-05-01 12:33</td>
+							      <td>Karta Mmietka</td>
+							      <td>Nie</td>
+							      <td><a href="" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="szczegóły"><i class="glyphicon glyphicon-file"></i></a></td>
+							    </tr>
+							    <tr>
+							      <td><img src="../images/dash/eskipass_karta2.jpg" width="100"></td>
+							      <td>123133132113</td>
+							      <td>2015-05-01 12:33</td>
+							      <td>Karta Mmietka</td>
+							      <td>Nie</td>
+							      <td><a href="" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="szczegóły"><i class="glyphicon glyphicon-file"></i></a></td>
+							    </tr>
+							    
+							  </tbody>
+							</table>
+						
+							</div>
+						
+						</div>
+						
+						<div class="clearfix"></div>
+
+						
+						<div class="line2"></div><br/>
+								
+						
+					  </div>
+					  <!-- END OF TAB 1 -->		
+					  
+					  					  
+
+					
+				</div>
+				<!-- END OF RIGHT CPNTENT -->
+			
+			<div class="clearfix"></div><br/><br/>
+			</div>
+			<!-- END CONTENT -->			
+			
+
+			
+		</div>
+		
+		
+	</div>
+	<!-- END OF CONTENT -->
+	
+
+	
+	<div class="masternotice none">
+	 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	 Message from TitanicThemes
+	</div>
+	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	
+    <!-- This page JS -->
+	<script src="../assets/js/js-index.js"></script>	
+	<script src="../assets/js/js-dashboard.js"></script>	
+		
+	<!-- Sparkline -->	
+	<script src="../assets/js/jquery.sparkline.js"></script>
+	
+    <!-- Custom functions -->
+    <script src="../assets/js/functions.js"></script>
+	
+    <!-- Counter -->	
+    <script src="../assets/js/counter.js"></script>		
+	
+
+	
+	<!-- Easing -->
+    <script src="../assets/js/jquery.easing.js"></script>
+	
+    <!-- Nicescroll  -->	
+	<script src="../assets/js/jquery.nicescroll.min.js"></script>
+	
+    <!-- CarouFredSel -->
+    <script src="../assets/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+    <script src="../assets/js/helper-plugins/jquery.touchSwipe.min.js"></script>
+	<script type="text/javascript" src="../assets/js/helper-plugins/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="../assets/js/helper-plugins/jquery.transit.min.js"></script>
+	<script type="text/javascript" src="../assets/js/helper-plugins/jquery.ba-throttle-debounce.min.js"></script>
+	
+    <!-- Custom Select -->
+	<script type='text/javascript' src='../assets/js/jquery.customSelect.js'></script>	
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../dist/js/bootstrap.min.js"></script>
+    
+    
+    
+    <script>
+    $(document).ready(function(){
+	    $(function () {
+	      $('[data-toggle="tooltip"]').tooltip()
+	    })
+    });
+    </script>
+    
+  </body>
+</html>
