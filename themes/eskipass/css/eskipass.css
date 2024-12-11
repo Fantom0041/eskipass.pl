@@ -206,6 +206,7 @@
     overflow: hidden;
 }
 
+/* hover start */
 .eskipass .boks .feature-box {
     transition: all 0.3s ease;
 }
@@ -223,7 +224,7 @@
 }
 
 .eskipass .boks:hover .feature-box::before {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .eskipass .boks .hover-content {
@@ -240,11 +241,111 @@
     padding: 20px;
     transform: translate(-50%, -40%);
 }
+.eskipass .boks .hover-content p {
+    font-size: 16px;
+    color: white;
+}
 
 .eskipass .boks:hover .hover-content {
     opacity: 1;
     transform: translate(-50%, -50%);
 }
+.button-discount-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.discount-badge {
+    background-color: #ff4444;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* Existing hover styles */
+.eskipass .boks {
+    position: relative;
+    overflow: hidden;
+}
+
+.eskipass .boks .feature-box {
+    transition: all 0.3s ease;
+}
+
+.eskipass .boks .feature-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease-in-out;
+    z-index: 1;
+}
+
+
+
+.eskipass .boks .hover-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    color: white;
+    text-align: center;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+    width: 80%;
+    padding: 20px;
+}
+
+.eskipass .boks:hover .hover-content {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.hover-content .hover-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hover-content .hover-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease-in-out;
+}
+
+.hover-content .hover-list li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* Animation for list items */
+.eskipass .boks:hover .hover-content {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.eskipass .boks:hover .hover-list li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* hover end */
 .eskipass .boks.show{
     animation: showBoks 0.1s;
     animation-timing-function: linear;

@@ -163,6 +163,7 @@ class Boksy extends Main
                         $this->en->query(sprintf("UPDATE `" . TABLE_PREFIX . "glowna_boksy` "
                             . "SET `nazwa`='%s', `datastart`=%d, `datastop`=%d, `url`='%s', `img`='%s', "
                             . "`text1`='%s', `text2`='%s', `text3`='%s', `text4`='%s', "
+                            . "`description`='%s', "
                             . "`orderby`=%d, `ishidden`=%d, `type`='%s', `state`='%s' "
                             . "WHERE id=%d "
                             . "LIMIT 1",
@@ -175,6 +176,8 @@ class Boksy extends Main
                             $this->en->Escape($vars['text2']),
                             $this->en->Escape($vars['text3']),
                             $this->en->Escape($vars['text4']),
+                            $this->en->Escape($vars['description']), 
+                         
                             intval($vars['orderby']),
                             $this->add->CheckboxToInt($vars['ishidden']),
                             $this->en->Escape($vars['type']),

@@ -72,10 +72,21 @@
                     </div>
 
                     {{if $postback.type == "osrodek"}}
-                    <div class="form-group form-material">
-                        <label class="control-label" for="text3">Tekst Przycisku</label>
-                        <textarea class="form-control" id="text3" name="text3" rows="3">{{$postback.text3}}</textarea>
-                    </div>
+                        <div class="form-group form-material">
+                            <label class="control-label" for="text3">Tekst Przycisku</label>
+                            <textarea class="form-control" id="text3" name="text3" rows="3">{{$postback.text3}}</textarea>
+                        </div>
+                        <div class="form-group form-material">
+                            <label class="control-label" for="description">Opis (wyświetlany po najechaniu)</label>
+                            <textarea class="form-control" id="description" name="description" rows="4" 
+                                    placeholder="Wprowadź opis, który będzie widoczny po najechaniu na boks">{{$postback.description}}</textarea>
+                        </div>
+
+                        <div class="form-group form-material">
+                            <label class="control-label" for="discount">Zniżka</label>
+                            <textarea class="form-control" id="discount" name="discount" rows="2" 
+                                    placeholder="Wprowadź informacje o zniżce">{{$postback.discount}}</textarea>
+                        </div>
                     {{/if}}
 
                     <div class="form-group form-material">
