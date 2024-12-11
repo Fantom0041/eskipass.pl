@@ -1,3 +1,59 @@
 data
 e-skipass.pl.zip
 maile_log.txt
+
+.env# Logs
+logs/
+logs/apache2/
+*.log
+
+# Storage
+storage/logs/
+storage/cache/
+
+# Environment files
+.env
+
+# PHP dependencies
+vendor/
+composer.lock
+
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Certificates and keys
+*.pem
+*.key
+*.crt
+*.cer
+*.der
+*.priv
+
+# Cache files
+*.cache
+.phpunit.result.cache
+
+maile_log.txt

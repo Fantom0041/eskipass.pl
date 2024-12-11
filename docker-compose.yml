@@ -1,0 +1,56 @@
+version: '3.3'
+
+services:
+  main_web_epass:
+    networks:
+      - epass2_network
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    image: httpd:2.4
+    ports:
+      - "8080:80"
+    environment:
+      - HTTP_PROXY=http://172.16.2.254:3128
+      - HTTPS_PROXY=http://172.16.2.254:3128
+      - NO_PROXY=localhost,127.0.0.1
+    volumes:
+      - .:/usr/local/apache2/htdocs:rw
+      - ./apache2/my-httpd.conf:/usr/local/apache2/conf/httpd.conf:ro
+      - ./logs/apache2:/usr/local/apache2/logs:rw
+    user: "www-data:www-data"
+    container_name: main_web_epass
+    depends_on:
+      - main_php_epass
+
+  main_php_epass:
+    networks:
+      - epass2_network
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/code:rw
+      - ./php/php.ini:/usr/local/etc/php/conf.d/php.ini:ro
+      - ./storage/logs:/code/storage/logs:rw
+      - ./storage/cache:/code/storage/cache:rw
+      - ./logs/apache2:/var/log/apache2:rw
+    environment:
+      - HTTP_PROXY=http://172.16.2.254:3128
+      - HTTPS_PROXY=http://172.16.2.254:3128
+      - NO_PROXY=localhost,127.0.0.1
+      - MYSQL_HOST=${MYSQL_HOST}
+      - MYSQL_PORT=${MYSQL_PORT}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - SITE_URL=${SITE_URL}
+    working_dir: /code
+    container_name: main_php_epass
+
+networks:
+  epass2_network:
+    external: true
