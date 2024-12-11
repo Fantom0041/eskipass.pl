@@ -105,6 +105,9 @@
                                                                      class="btn btn-secondary">{{if $boksy[id].text3}}{{$boksy[id].text3}}{{else}}Kup bilet{{/if}}</a>
                                     </p>{{/if}}
                                 </div>
+                                <div class="hover-content">
+                                    <p>{{if $boksy[id].description}}{{$boksy[id].description}}{{else}}Odkryj więcej szczegółów o tej ofercie. Kliknij, aby zobaczyć pełną ofertę i dokonać rezerwacji.{{/if}}</p>
+                                </div>
                             </div>
                         </div>
                         {{/section}}
