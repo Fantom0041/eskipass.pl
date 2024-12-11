@@ -89,6 +89,12 @@
                 </div>
                 <div id="boksy" class="container clearfix">
                     <div class="row">
+                        <div class="col-12 mb-4">
+                            <button id="checkVersion" class="btn btn-primary">
+                                Sprawdź wersję
+                                <span id="versionStatus" class="version-badge"></span>
+                            </button>
+                        </div>
                         {{section name=id loop=$boksy}}
                         <div data-name="{{$boksy[id].text1}}" data-state="{{$boksy[id].state}}"
      class="boks col-lg-4 col-sm-6 col-xs-12 bottommargin" {{if $boksy[id].url != ""}}style="cursor: pointer;"{{/if}}>
@@ -109,6 +115,9 @@
                 {{if $boksy[id].discount}}
                 <span class="discount-badge">{{$boksy[id].discount}}</span>
                 {{/if}}
+                <span class="live-discount" data-url="{{$boksy[id].url}}">
+                    <i class="fa fa-refresh fa-spin"></i>
+                </span>
             </div>
             {{/if}}
         </div>
@@ -168,3 +177,55 @@
 </div>
 </body>
 </html>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const discountElements = document.querySelectorAll('.live-discount');
+    
+    async function fetchDiscount(url, element) {
+        try {
+            console.log('Fetching discount for URL:', url); // Debug log
+            
+            const response = await fetch('/api/scrape-discount.php', {  // Note the .php extension
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({ url: url })
+            });
+            
+            // Log the raw response for debugging
+            const rawResponse = await response.text();
+            console.log('Raw response:', rawResponse);
+            
+            // Try to parse as JSON
+            let data;
+            try {
+                data = JSON.parse(rawResponse);
+            } catch (e) {
+                console.error('Failed to parse JSON:', rawResponse);
+                throw new Error('Invalid JSON response');
+            }
+            
+            if (data.success && data.discount) {
+                element.innerHTML = `<span class="live-price">-${data.discount}%</span>`;
+                if (data.price) {
+                    element.innerHTML += `<span class="live-price">${data.price} zł</span>`;
+                }
+            } else {
+                element.style.display = 'none';
+            }
+        } catch (error) {
+            console.error('Error details:', error);
+            element.style.display = 'none';
+        }
+    }
+    
+    discountElements.forEach(element => {
+        const url = element.dataset.url;
+        if (url) {
+            fetchDiscount(url, element);
+        }
+    });
+});
+</script>

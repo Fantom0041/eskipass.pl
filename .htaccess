@@ -3,10 +3,15 @@ Options -Indexes
 RewriteEngine On
 RewriteBase /
 
+RewriteCond %{REQUEST_URI} ^/api/
+RewriteRule ^api/(.*)$ api/$1 [L,QSA]
+
 RewriteRule ^([a-z0-9\-]+)/([a-z]+)$ admin.php?$1&a=$2 [QSA]
 RewriteRule ^([a-z0-9\-]+)$ admin.php?$1 [QSA]
 
 
 RewriteRule ^([a-z0-9\-]+)/([a-z0-9\-\/]+).html$ index.php?$1&params=$2 [QSA]
 RewriteRule ^([a-z0-9\-]+).html$ index.php?$1 [QSA]
+
+RewriteRule ^api/scrape-discount$ scrape-discount.php [L]
 </IfModule>
