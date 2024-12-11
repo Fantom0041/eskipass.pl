@@ -1,6 +1,6 @@
 <?php
 define('INSTALLATION', 1);
-define('SITE_URL', 'https://eskipass.x-soft.it/');
+define('SITE_URL', getenv('SITE_URL') ?: 'https://eskipass.x-soft.it/');
 define('SITE_NAME', 'eSkipass - karnety i ubezpieczenia na stoki narciarskie online');
 define('SITE_DESC', 'Platforma sprzedaży karnetów narciarskich i ubezpieczeń narciarskich online.');
 define('THEME', 'eskipass');
