@@ -104,24 +104,23 @@
                                     <span id="versionStatus" class="version-badge"></span>
                                 </button>
                             </div>
+
+
+
+
                             {{section name=id loop=$boksy}}
                             <div data-name="{{$boksy[id].text1}}" data-state="{{$boksy[id].state}}"
                                 class="boks col-lg-4 col-sm-6 col-xs-12 bottommargin" {{if $boksy[id].url !=""
                                 }}style="cursor: pointer;" {{/if}}>
                                 <div class="feature-box center media-box fbox-bg">
-                                    <div class="fbox-media">
-                                        <img class="resize_img" data-format="16:9" src="{{$siteUrl}}{{$boksy[id].img}}"
-                                            alt="{{$boksy[id].text1}}" />
-                                    </div>
-                                    <div class="fbox-desc">
-                                        {{if $boksy[id].text1}}<h3>{{$boksy[id].text1}}{{if $boksy[id].text2}}<span
-                                                class="subtitle">{{$boksy[id].text2}}</span>{{/if}}
-                                        </h3>{{/if}}
+                                    <div class="fbox-header">
+                                        {{if $boksy[id].text1}}
+                                        <h3>{{$boksy[id].text1}}
+                                            {{if $boksy[id].text2 && !$boksy[id].description}}<span class="subtitle">{{$boksy[id].text2}}</span>{{/if}}
+                                        </h3>
+                                        {{/if}}
                                         {{if $boksy[id].url != ""}}
                                         <div class="button-discount-wrapper">
-                                            <a href="{{$boksy[id].url}}" class="btn btn-secondary">
-                                                {{if $boksy[id].text3}}{{$boksy[id].text3}}{{else}}Kup bilet{{/if}}
-                                            </a>
                                             {{if $boksy[id].discount}}
                                             <span class="discount-badge">{{$boksy[id].discount}}</span>
                                             {{/if}}
@@ -131,15 +130,37 @@
                                         </div>
                                         {{/if}}
                                     </div>
+                                    <div class="fbox-media">
+                                        <img class="resize_img" data-format="16:9" src="{{$siteUrl}}{{$boksy[id].img}}"
+                                            alt="{{$boksy[id].text1}}" />
+                                    </div>
                                     {{if $boksy[id].description}}
-                                    <div class="hover-content">
-                                        <ul class="hover-list">
-                                            {{foreach $boksy[id].description as $line}}
-                                            {{if $line|trim != ''}}
-                                            <li>{{$line|trim}}</li>
+                                    <div class="hover-overlay">
+                                        <div class="hover-content">
+                                            {{if $boksy[id].description}}
+                                            <div class="hover-description">
+                                                {{if $boksy[id].text2}}<h3 class="subtitle">{{$boksy[id].text2}}</h3>{{/if}}
+                                                <ul class="hover-list">
+                                                    {{foreach $boksy[id].description as $line}}
+                                                    {{if $line|trim != ''}}
+                                                    <li>{{$line|trim}}</li>
+                                                    {{/if}}
+                                                    {{/foreach}}
+                                                </ul>
+                                            </div>
                                             {{/if}}
-                                            {{/foreach}}
-                                        </ul>
+                                            <div class="hover-buttons">
+                                                {{if $boksy[id].url != ""}}
+                                                <a href="{{$boksy[id].url}}" class="btn btn-primary hover-btn">
+                                                    {{if $boksy[id].text3}}{{$boksy[id].text3}}{{else}}Kup karnet{{/if}}
+                                                </a>
+                                                {{if $boksy[id].discount}}
+                                                <span
+                                                    class="discount-badge hover-discount">{{$boksy[id].discount}}</span>
+                                                {{/if}}
+                                                {{/if}}
+                                            </div>
+                                        </div>
                                     </div>
                                     {{/if}}
                                 </div>

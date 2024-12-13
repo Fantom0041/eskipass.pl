@@ -43,9 +43,7 @@
     border: none;
 }
 
-.eskipass .feature-box.media-box.fbox-bg .fbox-media {
-    border: 1px solid #E5E5E5;
-}
+
 
 .eskipass .feature-box.media-box.fbox-bg .fbox-media img {
     height: 100%;
@@ -246,10 +244,7 @@
     color: white;
 }
 
-.eskipass .boks:hover .hover-content {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-}
+
 .button-discount-wrapper {
     display: flex;
     align-items: center;
@@ -336,15 +331,16 @@
 }
 
 /* Animation for list items */
-.eskipass .boks:hover .hover-content {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-}
 
 .eskipass .boks:hover .hover-list li {
     opacity: 1;
-    transform: translateY(0);
 }
+
+
+
+
+
+
 
 /* hover end */
 .eskipass .boks.show{
@@ -551,5 +547,194 @@
     }
     .eskipass #boksy-search-input{
         height: 30px;
+    }
+}
+
+/* Hover effect styles */
+.eskipass .boks .feature-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.eskipass .boks .hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.eskipass .boks:hover .hover-overlay {
+    opacity: 1;
+}
+
+.eskipass .boks .hover-content {
+    width: 90%;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+
+.eskipass .boks .hover-description {
+    margin-bottom: 20px;
+}
+
+.eskipass .boks .hover-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: left;
+}
+
+.eskipass .boks .hover-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.eskipass .boks .hover-list li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+}
+
+.eskipass .boks .hover-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.eskipass .boks .hover-btn {
+    background: #1ABC9C;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.eskipass .boks .hover-btn:hover {
+    background: #16a085;
+    transform: translateY(-2px);
+}
+
+.eskipass .boks .hover-discount {
+    background: #e74c3c;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .eskipass .boks .hover-content {
+        padding: 15px;
+    }
+    
+    .eskipass .boks .hover-list li {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    
+    .eskipass .boks .hover-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Add these new styles */
+.eskipass .feature-box.media-box.fbox-bg {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #E5E5E5;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.eskipass .feature-box .fbox-header {
+    padding: 15px 20px;
+    background: #fff;
+    /* border-bottom: 1px solid #E5E5E5; */
+}
+
+.eskipass .feature-box .fbox-header h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.eskipass .feature-box .fbox-header .subtitle {
+    display: block;
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+
+.eskipass .feature-box .button-discount-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.eskipass .feature-box .fbox-media {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.eskipass .feature-box .fbox-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.eskipass .feature-box .discount-badge {
+    background-color: #ff4444;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9em;
+    display: inline-block;
+}
+
+/* Update existing hover styles to work with new layout */
+.eskipass .boks .hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .eskipass .feature-box .fbox-header h3 {
+        font-size: 16px;
+    }
+    
+    .eskipass .feature-box .fbox-header .subtitle {
+        font-size: 13px;
+    }
+    
+    .eskipass .feature-box .fbox-media {
+        min-height: 200px;
     }
 }
