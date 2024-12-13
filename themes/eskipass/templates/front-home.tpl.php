@@ -135,7 +135,7 @@
                                             alt="{{$boksy[id].text1}}" />
                                        
                                     </div>
-                                    {{if $boksy[id].description}}
+                                    {{if $boksy[id].text4}}
                                         <div class="hover-overlay">
                                             <div class="hover-content">
                                                 <div class="hover-header">
