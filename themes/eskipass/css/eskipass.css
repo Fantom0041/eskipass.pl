@@ -562,12 +562,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.9);
     opacity: 0;
     transition: all 0.3s ease;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
     z-index: 2;
 }
 
@@ -576,31 +575,49 @@
 }
 
 .eskipass .boks .hover-content {
-    /* width: 90%; */
-    /* padding: 20px; */
-    color: white;
-    text-align: center;
-    transition: all 0.3s ease;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.eskipass .boks .hover-header {
+    text-align: center;
+}
+
+.eskipass .boks .hover-header h3 {
+    color: white;
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.eskipass .boks .hover-header .subtitle {
+    display: block;
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 5px;
+}
 
 .eskipass .boks .hover-description {
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .eskipass .boks .hover-list {
     list-style: none;
     padding: 0;
-    margin: 0 0 20px 0;
+    margin: 0;
     text-align: left;
 }
 
 .eskipass .boks .hover-list li {
     position: relative;
-    padding-left: 20px;
-    margin-bottom: 8px;
+    padding-left: 25px;
+    margin-bottom: 10px;
     font-size: 14px;
     color: #fff;
+    line-height: 1.4;
 }
 
 .eskipass .boks .hover-list li:before {
@@ -610,10 +627,14 @@
     color: #4CAF50;
 }
 
-.eskipass .boks .hover-buttons {
+.eskipass .boks .hover-footer {
+    margin-top: auto;
+}
+
+.eskipass .boks .hover-footer .button-discount-wrapper {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -638,16 +659,23 @@
     border-radius: 4px;
     font-weight: bold;
 }
+.eskipass .boks .hover-discount, .eskipass .boks .hover-btn{
+    font-size: 12px;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .eskipass .boks .hover-content {
-        padding: 15px;
+    .eskipass .boks .hover-header h3 {
+        font-size: 16px;
+    }
+    
+    .eskipass .boks .hover-header .subtitle {
+        font-size: 13px;
     }
     
     .eskipass .boks .hover-list li {
         font-size: 12px;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
     }
     
     .eskipass .boks .hover-btn {
