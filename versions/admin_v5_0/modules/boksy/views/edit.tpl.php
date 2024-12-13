@@ -77,9 +77,9 @@
                             <textarea class="form-control" id="text3" name="text3" rows="3">{{$postback.text3}}</textarea>
                         </div>
                         <div class="form-group form-material">
-                            <label class="control-label" for="description">Opis (wyświetlany po najechaniu)</label>
-                            <textarea class="form-control" id="description" name="description" rows="4" 
-                                    placeholder="Wprowadź opis, który będzie widoczny po najechaniu na boks">{{$postback.description}}</textarea>
+                            <label class="control-label" for="text4">Opis (wyświetlany po najechaniu)</label>
+                            <textarea class="form-control" id="text4" name="text4" rows="4" 
+                                    placeholder="Wprowadź opis, który będzie widoczny po najechaniu na boks">{{$postback.text4}}</textarea>
                         </div>
 
                         <div class="form-group form-material">
