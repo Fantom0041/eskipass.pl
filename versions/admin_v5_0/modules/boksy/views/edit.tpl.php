@@ -82,11 +82,7 @@
                                     placeholder="Wprowadź opis, który będzie widoczny po najechaniu na boks">{{$postback.text4}}</textarea>
                         </div>
 
-                        <div class="form-group form-material">
-                            <label class="control-label" for="discount">Zniżka</label>
-                            <textarea class="form-control" id="discount" name="discount" rows="2" 
-                                    placeholder="Wprowadź informacje o zniżce">{{$postback.discount}}</textarea>
-                        </div>
+                        
                     {{/if}}
 
                     <div class="form-group form-material">

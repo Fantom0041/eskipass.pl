@@ -142,10 +142,10 @@
                                                     <h3>{{$boksy[id].text1}}
                                                         {{if $boksy[id].text2}}<span class="subtitle">{{$boksy[id].text2}}</span>{{/if}}
                                                     </h3>
-                                                    {{if $boksy[id].description}}
+                                                    {{if $boksy[id].text4}}
                                                     <div class="hover-description">
                                                         <ul class="hover-list">
-                                                            {{foreach $boksy[id].description as $line}}
+                                                            {{foreach $boksy[id].text4 as $line}}
                                                             {{if $line|trim != ''}}
                                                             <li>{{$line|trim}}</li>
                                                             {{/if}}
