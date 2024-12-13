@@ -160,9 +160,9 @@
                                                         <a href="{{$boksy[id].url}}" class="btn btn-primary hover-btn">
                                                             {{if $boksy[id].text3}}{{$boksy[id].text3}}{{else}}Kup karnet{{/if}}
                                                         </a>
-                                                        {{if $boksy[id].discount}}
-                                                        <span class="discount-badge hover-discount">{{$boksy[id].discount}}</span>
-                                                        {{/if}}
+                                                       
+                                                        <span class="discount-badge live-discount" data-url="{{$boksy[id].url}}"></span>
+                                                     
                                                     </div>
                                                     {{/if}}
                                                 </div>

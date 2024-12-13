@@ -229,7 +229,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     color: white;
     text-align: center;
     opacity: 0;
@@ -237,7 +237,7 @@
     transition: all 0.3s ease-in-out;
     width: 80%;
     padding: 20px;
-    transform: translate(-50%, -40%);
+    /* transform: translate(-50%, -40%); */
 }
 .eskipass .boks .hover-content p {
     font-size: 16px;
@@ -290,7 +290,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -50%);
     color: white;
     text-align: center;
     opacity: 0;
@@ -302,7 +302,7 @@
 
 .eskipass .boks:hover .hover-content {
     opacity: 1;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
 }
 
 .hover-content .hover-list {
@@ -318,7 +318,7 @@
     font-size: 14px;
     line-height: 1.4;
     opacity: 0;
-    transform: translateY(10px);
+    /* transform: translateY(10px); */
     transition: all 0.3s ease-in-out;
 }
 
@@ -575,7 +575,9 @@
 }
 
 .eskipass .boks .hover-content {
-    padding: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
