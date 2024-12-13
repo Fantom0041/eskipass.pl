@@ -576,8 +576,8 @@
 }
 
 .eskipass .boks .hover-content {
-    width: 90%;
-    padding: 20px;
+    /* width: 90%; */
+    /* padding: 20px; */
     color: white;
     text-align: center;
     transition: all 0.3s ease;

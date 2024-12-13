@@ -137,9 +137,15 @@
                                     {{if $boksy[id].description}}
                                     <div class="hover-overlay">
                                         <div class="hover-content">
+                                            <div class="hover-header">
+                                                <h3>
+                                                    {{if $boksy[id].text1}}{{$boksy[id].text1}}{{/if}}
+                                                    {{if $boksy[id].text2}}<span class="subtitle">{{$boksy[id].text2}}</span>{{/if}}
+                                                </h3>
+                                            </div>
                                             {{if $boksy[id].description}}
                                             <div class="hover-description">
-                                                {{if $boksy[id].text2}}<h3 class="subtitle">{{$boksy[id].text2}}</h3>{{/if}}
+                                                
                                                 <ul class="hover-list">
                                                     {{foreach $boksy[id].description as $line}}
                                                     {{if $line|trim != ''}}
