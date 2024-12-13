@@ -25,4 +25,6 @@ define('TABLE_PREFIX', 'ts_');
 
 /** teenyCMS version. */
 define('VER', '5.0');
+
+define('SALT', 'lk23j4987sg203)KP903(*&rl');
 ?>
