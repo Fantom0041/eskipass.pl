@@ -208,10 +208,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (data.success && data.discount) {
-                element.innerHTML = `<span class="live-price">-${data.discount}%</span>`;
-                if (data.price) {
-                    element.innerHTML += `<span class="live-price">${data.price} zł</span>`;
-                }
+                element.innerHTML = `<span class="discount-badge">rabaty do -${data.discount}%</span>`;
+               
             } else {
                 element.style.display = 'none';
             }
