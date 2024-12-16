@@ -271,7 +271,9 @@ $(function () {
 
     $('.boks').on('click', function () {
         var url = $(this).find('a').attr('href');
-        window.location = url;
+        if(url){
+            window.location = url;
+        }
     })
 
 });

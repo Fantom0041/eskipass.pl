@@ -187,7 +187,6 @@
             <img class="resize_img" data-format="16:9"
                 src="{{$siteUrl}}{{$oldboksy[id].img}}" alt="{{$oldboksy[id].text1}}" />
         </div>
-        {{if $oldboksy[id].text4}}
         <div class="hover-overlay">
             <div class="hover-content">
                 <div class="hover-header">
@@ -213,7 +212,6 @@
                 </div>
             </div>
         </div>
-        {{/if}}
     </div>
 </div>
 {{/section}}
