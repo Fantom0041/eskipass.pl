@@ -1,4 +1,3 @@
-// File: versions/website_v5_0/modules/userlogin/Userlogin.php
 
 <?php
 
@@ -24,8 +23,8 @@ class Userlogin extends Main
             // Add your login logic here
         }
 
-        // Assign any error messages if they exist
-        if(array_key_exists('return_message',$_SESSION)){
+        // Check if session exists before accessing it
+        if (isset($_SESSION) && array_key_exists('return_message', $_SESSION)) {
             $this->tpl->assign("return_message", '<div class="alert-'.$_SESSION['return_message'][1].' text-center">'.$_SESSION['return_message'][0].'</div>');
             unset($_SESSION['return_message']);
         }

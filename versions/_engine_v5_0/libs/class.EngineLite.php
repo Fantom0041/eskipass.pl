@@ -7,6 +7,9 @@ class Engine extends Database {
 
 
 	public function __construct() {
+		if (session_status() === PHP_SESSION_NONE && !headers_sent()) {
+			session_start();
+		}
 
 		$this->startdb();
 
@@ -17,7 +20,6 @@ class Engine extends Database {
 		$this->query("SET character_set_client = 'utf8'");
 		$this->query("SET character_set_results = 'utf8'");
 		$this->query("SET names = 'utf8'");
-		session_start();
 		
 		$this->php_session_id = session_id();
 	}
