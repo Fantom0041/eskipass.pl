@@ -65,7 +65,12 @@
                         <div class="row">
                             <div class="col-lg-1 hidden-md order-lg-1">FILTRUJ</div>
                             <div id="boksy-sort"
-                                class="col-lg-1 col-md-2 col-sm-6 order-lg-2 order-md-2 order-sm-3 order-3">
+                                class="col-lg-1 col-md-2 col-sm-6 order-lg-2 order-md-2 order-sm-1 order-2 col-12"
+                                data-dir="none">A-Z
+                                <span class="icon icon-arrow-up"></span>
+                            </div>
+                            <div id="boksy-state"
+                                class="col-lg-9 col-md-8 col-sm-12 order-lg-3 order-md-3 order-sm-3 order-3">
                                 <div class="row">
                                     <div class="label col-lg-3 col-md-5 col-sm-12">
                                         Województwo
@@ -155,9 +160,10 @@
                                                         <a href="{{$boksy[id].url}}" class="btn btn-primary hover-btn">
                                                             {{if $boksy[id].text3}}{{$boksy[id].text3}}{{else}}Kup karnet{{/if}}
                                                         </a>
+                                                       
+                                                        
+                                                     
                                                     </div>
-                                                    {{else}}
-                                                    <div class="no-offer-message">Brak ofert</div>
                                                     {{/if}}
                                                 </div>
                                             </div>
