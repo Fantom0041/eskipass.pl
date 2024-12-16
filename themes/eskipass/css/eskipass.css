@@ -821,6 +821,8 @@
 }
 
 
+
+
 .feature-box.inactive .hover-overlay {
     pointer-events: none; /* Blokuje kliknięcia ale pozwala na hover */
 }

@@ -174,9 +174,7 @@
                             {{/section}}
 {{section name=id loop=$oldboksy}}
 <div data-name="{{$oldboksy[id].text1}}" data-state="{{$oldboksy[id].state}}"
-    class="boks col-lg-4 col-sm-6 col-xs-12 bottommargin" 
-    style="cursor: default;"
-    onclick="return false;">
+    class="boks col-lg-4 col-sm-6 col-xs-12 bottommargin">
     <div class="feature-box center media-box fbox-bg inactive">
         <div class="fbox-header">
             {{if $oldboksy[id].text1}}
@@ -190,7 +188,7 @@
                 src="{{$siteUrl}}{{$oldboksy[id].img}}" alt="{{$oldboksy[id].text1}}" />
         </div>
         {{if $oldboksy[id].text4}}
-        <div class="hover-overlay" onclick="return false;">
+        <div class="hover-overlay">
             <div class="hover-content">
                 <div class="hover-header">
                     <h3>{{$oldboksy[id].text1}}
