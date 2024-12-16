@@ -16,22 +16,64 @@ class Userlogin extends Main
         $this->tpl->assign("footer", $this->LoadWidget('footer', $this->footerparams));
         $this->tpl->assign("scripts", $this->LoadWidget('scripts', array()));
 
-        // Handle form submission
-        if (isset($_POST['login-form-submit'])) {
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            // Add your login logic here
-        }
 
-        // Check if session exists before accessing it
-        if (isset($_SESSION) && array_key_exists('return_message', $_SESSION)) {
-            $this->tpl->assign("return_message", '<div class="alert-'.$_SESSION['return_message'][1].' text-center">'.$_SESSION['return_message'][0].'</div>');
-            unset($_SESSION['return_message']);
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $this->handleLogin();
+            return;
+
+
         }
 
         // Render the login template
         $this->output = $this->tpl->fetch("front-login.tpl.php");
+
     }
+
+
+    private function handleLogin() 
+    {
+        $response = ['success' => false, 'message' => ''];
+        
+        // Validate email
+        if (!isset($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            $response['message'] = 'Proszę podać prawidłowy adres email.';
+            echo json_encode($response);
+            return;
+        }
+
+        // // Validate password
+        // if (!isset($_POST['password']) || strlen($_POST['password']) < 6) {
+        //     $response['message'] = 'Hasło musi mieć co najmniej 6 znaków.';
+        //     echo json_encode($response);
+        //     return;
+        // }
+
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        
+        // Add your actual login logic here
+        // For example:
+        // if ($this->authenticateUser($email, $password)) {
+        //     $response['success'] = true;
+        //     $response['message'] = 'Zalogowano pomyślnie.';
+        // } else {
+        //     $response['message'] = 'Nieprawidłowy email lub hasło.';
+        // } $response['success'] = true;
+
+        $response['success'] = true;
+        $response['message'] = 'Zalogowano pomyślnie.';
+
+        echo json_encode($response);
+    }
+
+
+
+
+
+
+
+
 }
 
 ?>

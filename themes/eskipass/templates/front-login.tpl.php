@@ -122,6 +122,48 @@
 .custom-control-label {
     cursor: pointer;
 }
-
+.alert-danger {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    color: #721c24;
+    background-color: #f8d7da;
+}
 
 </style>
+
+
+<script>
+document.getElementById('login-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Hide any existing error messages
+    const errorDiv = document.getElementById('login-error');
+    errorDiv.style.display = 'none';
+    
+    // Get form data
+    const formData = new FormData(this);
+    
+    // Send AJAX request
+    fetch(window.location.href, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Redirect on successful login
+            window.location.href = '{{$siteUrl}}dashboard'; // Adjust the redirect URL as needed
+        } else {
+            // Show error message
+            errorDiv.textContent = data.message;
+            errorDiv.style.display = 'block';
+        }
+    })
+    .catch(error => {
+        errorDiv.textContent = 'Wystąpił błąd podczas logowania. Spróbuj ponownie.';
+        errorDiv.style.display = 'block';
+    });
+});
+</script>
