@@ -172,28 +172,31 @@
                                 </div>
                             </div>
                             {{/section}}
-                            {{section name=id loop=$oldboksy}}
-                            <div data-name="{{$oldboksy[id].text1}}" data-state="{{$oldboksy[id].state}}"
-                                class="boks col-lg-4 col-sm-6 col-xs-12 bottommargin-lg" {{if $oldboksy[id].url !=""
-                                }}style="cursor: pointer;" {{/if}}>
-                                <div class="feature-box center media-box fbox-bg" style="opacity: 0.3">
-                                    <div class="fbox-media">
-                                        <img class="resize_img" data-format="16:9"
-                                            src="{{$siteUrl}}{{$oldboksy[id].img}}" alt="{{$oldboksy[id].text1}}" />
-                                    </div>
-                                    <div class="fbox-desc">
-                                        {{if $oldboksy[id].text1}}<h3>{{$oldboksy[id].text1}}{{if
-                                            $oldboksy[id].text2}}<span
-                                                class="subtitle">{{$oldboksy[id].text2}}</span>{{/if}}
-                                        </h3>{{/if}}
-                                        {{if $oldboksy[id].url != ""}}<p><a href="{{$oldboksy[id].url}}"
-                                                class="btn btn-secondary">{{if
-                                                $oldboksy[id].text3}}{{$oldboksy[id].text3}}{{else}}Kup bilet{{/if}}</a>
-                                        </p>{{/if}}
-                                    </div>
-                                </div>
-                            </div>
-                            {{/section}}
+ {{section name=id loop=$oldboksy}}
+<div data-name="{{$oldboksy[id].text1}}" data-state="{{$oldboksy[id].state}}"
+    class="boks col-lg-4 col-sm-6 col-xs-12 bottommargin-lg" {{if $oldboksy[id].url !=""
+    }}style="cursor: pointer;" {{/if}}>
+    <div class="feature-box center media-box fbox-bg" style="opacity: 0.3">
+        <div class="fbox-media">
+            <img class="resize_img" data-format="16:9"
+                src="{{$siteUrl}}{{$oldboksy[id].img}}" alt="{{$oldboksy[id].text1}}" />
+            <!-- Dodaj napis tutaj, bezpośrednio w fbox-media -->
+            <div class="hover-message" style="display: none;">
+                BRAK OFERT
+            </div>
+        </div>
+        <div class="fbox-desc">
+            {{if $oldboksy[id].text1}}<h3>{{$oldboksy[id].text1}}{{if
+                $oldboksy[id].text2}}<span class="subtitle">{{$oldboksy[id].text2}}</span>{{/if}}
+            </h3>{{/if}}
+            {{if $oldboksy[id].url != ""}}<p><a href="{{$oldboksy[id].url}}"
+                    class="btn btn-secondary">{{if
+                    $oldboksy[id].text3}}{{$oldboksy[id].text3}}{{else}}Kup bilet{{/if}}</a>
+            </p>{{/if}}
+        </div>
+    </div>
+</div>
+{{/section}}
                         </div>
                     </div>
                 </div>
@@ -265,6 +268,25 @@
             }
         });
     });
+    document.addEventListener('DOMContentLoaded', function() {
+    const oldBoxes = document.querySelectorAll('.feature-box[style*="opacity: 0.3"]');
+    
+    oldBoxes.forEach(box => {
+        box.addEventListener('mouseenter', function() {
+            const hoverMessage = this.querySelector('.hover-message');
+            if (hoverMessage) {
+                hoverMessage.style.display = 'block';
+            }
+        });
+        
+        box.addEventListener('mouseleave', function() {
+            const hoverMessage = this.querySelector('.hover-message');
+            if (hoverMessage) {
+                hoverMessage.style.display = 'none';
+            }
+        });
+    });
+});
 </script>
 
 

@@ -782,3 +782,28 @@
     opacity: 1;
     transform: translateY(0);
 }
+.hover-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000000 !important; /* Wymuszony czarny kolor */
+    background: #ffffff; /* Białe tło */
+    padding: 5px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    pointer-events: none; /* Zapobiega interakcji z napisem */
+}
+
+.feature-box {
+    position: relative;
+}
+
+.feature-box {
+    position: relative;
+}
