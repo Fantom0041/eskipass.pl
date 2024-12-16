@@ -172,28 +172,48 @@
                                 </div>
                             </div>
                             {{/section}}
- {{section name=id loop=$oldboksy}}
+{{section name=id loop=$oldboksy}}
 <div data-name="{{$oldboksy[id].text1}}" data-state="{{$oldboksy[id].state}}"
-    class="boks col-lg-4 col-sm-6 col-xs-12 bottommargin-lg" {{if $oldboksy[id].url !=""
-    }}style="cursor: pointer;" {{/if}}>
-    <div class="feature-box center media-box fbox-bg" style="opacity: 0.3">
+    class="boks col-lg-4 col-sm-6 col-xs-12 bottommargin">
+    <div class="feature-box center media-box fbox-bg inactive">
+        <div class="fbox-header">
+            {{if $oldboksy[id].text1}}
+            <h3>{{$oldboksy[id].text1}}
+                {{if $oldboksy[id].text2}}<span class="subtitle">{{$oldboksy[id].text2}}</span>{{/if}}
+            </h3>
+            {{/if}}
+        </div>
         <div class="fbox-media">
             <img class="resize_img" data-format="16:9"
                 src="{{$siteUrl}}{{$oldboksy[id].img}}" alt="{{$oldboksy[id].text1}}" />
-            <!-- Dodaj napis tutaj, bezpośrednio w fbox-media -->
-            <div class="hover-message" style="display: none;">
-                BRAK OFERT
+        </div>
+        {{if $oldboksy[id].text4}}
+        <div class="hover-overlay">
+            <div class="hover-content">
+                <div class="hover-header">
+                    <h3>{{$oldboksy[id].text1}}
+                        {{if $oldboksy[id].text2}}<span class="subtitle">{{$oldboksy[id].text2}}</span>{{/if}}
+                    </h3>
+                    {{if $oldboksy[id].text4}}
+                    <div class="hover-description">
+                        <ul class="hover-list">
+                            {{foreach $oldboksy[id].text4 as $line}}
+                            {{if $line|trim != ''}}
+                            <li>{{$line|trim}}</li>
+                            {{/if}}
+                            {{/foreach}}
+                        </ul>
+                    </div>
+                    {{/if}}
+                </div>
+                <div class="hover-footer">
+                    <div class="button-discount-wrapper">
+                        <span class="btn btn-secondary hover-btn">BRAK OFERT</span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="fbox-desc">
-            {{if $oldboksy[id].text1}}<h3>{{$oldboksy[id].text1}}{{if
-                $oldboksy[id].text2}}<span class="subtitle">{{$oldboksy[id].text2}}</span>{{/if}}
-            </h3>{{/if}}
-            {{if $oldboksy[id].url != ""}}<p><a href="{{$oldboksy[id].url}}"
-                    class="btn btn-secondary">{{if
-                    $oldboksy[id].text3}}{{$oldboksy[id].text3}}{{else}}Kup bilet{{/if}}</a>
-            </p>{{/if}}
-        </div>
+        {{/if}}
     </div>
 </div>
 {{/section}}
@@ -268,25 +288,7 @@
             }
         });
     });
-    document.addEventListener('DOMContentLoaded', function() {
-    const oldBoxes = document.querySelectorAll('.feature-box[style*="opacity: 0.3"]');
-    
-    oldBoxes.forEach(box => {
-        box.addEventListener('mouseenter', function() {
-            const hoverMessage = this.querySelector('.hover-message');
-            if (hoverMessage) {
-                hoverMessage.style.display = 'block';
-            }
-        });
-        
-        box.addEventListener('mouseleave', function() {
-            const hoverMessage = this.querySelector('.hover-message');
-            if (hoverMessage) {
-                hoverMessage.style.display = 'none';
-            }
-        });
-    });
-});
+
 </script>
 
 

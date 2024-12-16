@@ -807,3 +807,9 @@
 .feature-box {
     position: relative;
 }
+
+.eskipass .boks .feature-box.inactive .btn.btn-secondary.hover-btn {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.65;
+}
