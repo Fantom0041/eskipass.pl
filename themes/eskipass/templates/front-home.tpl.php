@@ -188,30 +188,26 @@
                 src="{{$siteUrl}}{{$oldboksy[id].img}}" alt="{{$oldboksy[id].text1}}" />
         </div>
         <div class="hover-overlay">
-            <div class="hover-content">
-                <div class="hover-header">
-                    <h3>{{$oldboksy[id].text1}}
-                        {{if $oldboksy[id].text2}}<span class="subtitle">{{$oldboksy[id].text2}}</span>{{/if}}
-                    </h3>
-                    {{if $oldboksy[id].text4}}
-                    <div class="hover-description">
-                        <ul class="hover-list">
-                            {{foreach $oldboksy[id].text4 as $line}}
-                            {{if $line|trim != ''}}
-                            <li>{{$line|trim}}</li>
-                            {{/if}}
-                            {{/foreach}}
-                        </ul>
-                    </div>
-                    {{/if}}
-                </div>
-                <div class="hover-footer">
-                    <div class="button-discount-wrapper">
-                       <span class="no-offers-text">BRAK OFERT</span>
-                    </div>
-                </div>
+    <div class="hover-content">
+        <div class="hover-header">
+            <h3>{{$oldboksy[id].text1}}
+                {{if $oldboksy[id].text2}}<span class="subtitle">{{$oldboksy[id].text2}}</span>{{/if}}
+            </h3>
+            <div class="hover-description">
+                <ul class="hover-list">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Pellentesque habitant morbi tristique senectus et netus.</li>
+                    <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                </ul>
             </div>
         </div>
+        <div class="hover-footer">
+            <div class="button-discount-wrapper">
+               <span class="no-offers-text">BRAK OFERT</span>
+            </div>
+        </div>
+    </div>
+</div>
     </div>
 </div>
 {{/section}}
