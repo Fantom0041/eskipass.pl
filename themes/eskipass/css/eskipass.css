@@ -813,3 +813,28 @@
     cursor: not-allowed;
     opacity: 0.65;
 }
+
+.eskipass .boks .feature-box.inactive {
+    
+    pointer-events: none; /* wyłącza możliwość klikania */
+    cursor: default;
+}
+
+
+.feature-box.inactive .hover-overlay {
+    pointer-events: none; /* Blokuje kliknięcia ale pozwala na hover */
+}
+
+
+
+.boks[style*="cursor: default"] {
+    pointer-events: none;
+}
+
+.boks[style*="cursor: default"] .hover-overlay {
+    pointer-events: auto; /* Tylko hover */
+}
+
+.boks[style*="cursor: default"] a {
+    pointer-events: none;
+}
