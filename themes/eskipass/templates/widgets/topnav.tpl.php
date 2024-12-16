@@ -6,16 +6,11 @@
         <div class="col_half col_last fright nobottommargin">
             <!-- Top Links
             ============================================= -->
-            {{*
             <div class="top-links">
                 <ul>
-                    <li><a href="#">PL</a>
-                        <ul>
-                        </ul>
-                    </li>
+                    <li><a href="{{$siteUrl}}userlogin" class="login-btn"><i class="icon-user"></i> Zaloguj się</a></li>
                 </ul>
             </div><!-- .top-links end -->
-            *}}
         </div>
     </div>
 </div><!-- #top-bar end -->
