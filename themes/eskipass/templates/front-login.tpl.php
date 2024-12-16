@@ -15,13 +15,8 @@
                                     <h3 class="mb-0">Zaloguj się</h3>
                                 </div>
                                 <div class="card-body">
-                                    <form id="login-form" name="login-form" class="nobottommargin" action="{{$siteUrl}}login/process" method="post">
-                                        {{if $error_message}}
-                                        <div class="alert alert-danger">
-                                            {{$error_message}}
-                                        </div>
-                                        {{/if}}
-                                        
+                                    <div id="login-error" class="alert alert-danger" style="display:none;"></div>
+                                    <form id="login-form" name="login-form" class="nobottommargin">
                                         <div class="form-group">
                                             <label for="login-form-username">Email:</label>
                                             <input type="email" id="login-form-username" name="email" class="form-control" required/>
@@ -45,7 +40,7 @@
                                         </div>
 
                                         <div class="form-group mb-0">
-                                            <button class="button button-3d button-black nomargin" id="login-form-submit" name="login-form-submit" value="login">Zaloguj się</button>
+                                            <button type="submit" class="button button-3d button-black nomargin" id="login-form-submit" name="login-form-submit">Zaloguj się</button>
                                         </div>
                                     </form>
                                 </div>
@@ -60,6 +55,9 @@
         </section>
         {{$footer}}
         {{$scripts}}
+        
+
+
     </div>
 </body>
 </html>
