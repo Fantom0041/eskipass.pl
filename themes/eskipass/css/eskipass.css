@@ -562,7 +562,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.7);
     opacity: 0;
     transition: all 0.3s ease;
     display: flex;
@@ -641,11 +641,13 @@
 .eskipass .boks .hover-btn {
     background: #1ABC9C;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 4px;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 14px;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .eskipass .boks .hover-btn:hover {
@@ -834,9 +836,70 @@
 }
 
 .boks[style*="cursor: default"] .hover-overlay {
-    pointer-events: auto; /* Tylko hover */
+    pointer-events: auto; 
 }
 
 .boks[style*="cursor: default"] a {
     pointer-events: none;
+}
+
+
+.eskipass .boks .hover-overlay {
+    background: rgba(0, 0, 0, 0.4); 
+}
+
+
+.eskipass .boks .no-offers-text {
+    color: #ff4444; 
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+
+.eskipass .boks .hover-btn {
+    background: #1ABC9C;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px; 
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.eskipass .boks .hover-btn:hover {
+    background: #16a085;
+    transform: translateY(-2px);
+}
+
+
+.eskipass .boks .feature-box.inactive {
+    opacity: 0.7; 
+    filter: grayscale(30%); 
+    pointer-events: none; 
+    cursor: default;
+}
+
+.eskipass .boks .feature-box.inactive img {
+    filter: grayscale(30%); /* Przyszarzenie obrazka */
+}
+
+/* Zachowanie przezroczystości tła dla hover overlay */
+.eskipass .boks .feature-box.inactive .hover-overlay {
+    background: rgba(0, 0, 0, 0.4); /* Zachowujemy przezroczystość */
+}
+
+/* Styl dla napisu "BRAK OFERT" */
+.eskipass .boks .no-offers-text {
+    color: #ff4444; /* Czerwony kolor */
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    text-transform: uppercase;
+    background: none; /* Usuwamy tło */
+    border: none; /* Usuwamy obramowanie */
+    padding: 0; /* Usuwamy padding */
 }

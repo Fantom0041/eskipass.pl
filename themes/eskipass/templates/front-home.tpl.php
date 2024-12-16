@@ -207,7 +207,7 @@
                 </div>
                 <div class="hover-footer">
                     <div class="button-discount-wrapper">
-                        <span class="btn btn-secondary hover-btn">BRAK OFERT</span>
+                       <span class="no-offers-text">BRAK OFERT</span>
                     </div>
                 </div>
             </div>
