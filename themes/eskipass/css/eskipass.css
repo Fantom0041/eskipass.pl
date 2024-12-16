@@ -636,7 +636,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
 }
 
 .eskipass .boks .hover-btn {
@@ -766,4 +765,20 @@
     .eskipass .feature-box .fbox-media {
         min-height: 200px;
     }
+}
+
+.eskipass .boks .no-offer-message {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.eskipass .boks:hover .no-offer-message {
+    opacity: 1;
+    transform: translateY(0);
 }
