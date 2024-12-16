@@ -6,6 +6,9 @@ RewriteBase /
 RewriteCond %{REQUEST_URI} ^/api/
 RewriteRule ^api/(.*)$ api/$1 [L,QSA]
 
+# Add the userlogin route
+RewriteRule ^userlogin$ index.php?userlogin [QSA]
+
 RewriteRule ^([a-z0-9\-]+)/([a-z]+)$ admin.php?$1&a=$2 [QSA]
 RewriteRule ^([a-z0-9\-]+)$ admin.php?$1 [QSA]
 
