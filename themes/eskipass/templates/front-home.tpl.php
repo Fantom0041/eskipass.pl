@@ -133,7 +133,13 @@
                                     <div class="fbox-media">
                                         <img class="resize_img" data-format="16:9" src="{{$siteUrl}}{{$boksy[id].img}}"
                                             alt="{{$boksy[id].text1}}" />
-                                       
+                                        {{if $boksy[id].url != ""}}
+                                        <div class="default-cta">
+                                            <a href="{{$boksy[id].url}}" class="btn btn-primary">
+                                                {{if $boksy[id].text3}}{{$boksy[id].text3}}{{else}}Kup karnet{{/if}}
+                                            </a>
+                                        </div>
+                                        {{/if}}
                                     </div>
                                     {{if $boksy[id].text4}}
                                         <div class="hover-overlay">

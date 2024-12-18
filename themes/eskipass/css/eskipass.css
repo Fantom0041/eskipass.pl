@@ -727,6 +727,7 @@
     flex: 1;
     position: relative;
     overflow: hidden;
+    padding-bottom: 90px;
 }
 
 .eskipass .feature-box .fbox-media img {
@@ -902,4 +903,85 @@
     background: none; /* Usuwamy tło */
     border: none; /* Usuwamy obramowanie */
     padding: 0; /* Usuwamy padding */
+}
+
+/* Update the fbox-media styles to ensure proper positioning */
+.eskipass .feature-box .fbox-media {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 80px;
+}
+
+/* Style for the default (non-hover) CTA */
+.eskipass .feature-box .default-cta {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.eskipass .feature-box .default-cta .btn {
+    background-color: #1ABC9C;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.eskipass .feature-box .default-cta .btn:hover {
+    background-color: #16a085;
+    transform: translateY(-2px);
+}
+
+/* Update hover button positioning to match default CTA */
+.eskipass .boks .hover-footer {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 3;
+}
+
+.eskipass .boks .hover-footer .button-discount-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.eskipass .boks .hover-btn {
+    background: #1ABC9C;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Hide default CTA when hovering */
+.eskipass .boks:hover .default-cta {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Ensure hover overlay is above the default CTA */
+.eskipass .boks .hover-overlay {
+    z-index: 2;
+}
+.default-cta {
+    margin-top: 10px;
 }
