@@ -895,14 +895,14 @@
 
 /* Styl dla napisu "BRAK OFERT" */
 .eskipass .boks .no-offers-text {
-    color: #ff4444; /* Czerwony kolor */
+    color: #ff4444; 
     font-weight: bold;
     font-size: 16px;
     display: inline-block;
     text-transform: uppercase;
-    background: none; /* Usuwamy tło */
-    border: none; /* Usuwamy obramowanie */
-    padding: 0; /* Usuwamy padding */
+    background: none;
+    border: none; 
+    padding: 0; 
 }
 
 /* Update the fbox-media styles to ensure proper positioning */
