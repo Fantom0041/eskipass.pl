@@ -148,7 +148,6 @@
                                                     <h3>{{$boksy[id].text1}}
                                                         {{if $boksy[id].text2}}<span class="subtitle">{{$boksy[id].text2}}</span>{{/if}}
                                                     </h3>
-                                                    {{if $boksy[id].text4}}
                                                     <div class="hover-description">
                                                         <ul class="hover-list">
                                                             {{foreach $boksy[id].text4 as $line}}
@@ -158,7 +157,6 @@
                                                             {{/foreach}}
                                                         </ul>
                                                     </div>
-                                                    {{/if}}
                                                 </div>
                                                 <div class="hover-footer">
                                                     {{if $boksy[id].url != ""}}
@@ -166,15 +164,34 @@
                                                         <a href="{{$boksy[id].url}}" class="btn btn-primary hover-btn">
                                                             {{if $boksy[id].text3}}{{$boksy[id].text3}}{{else}}Kup karnet{{/if}}
                                                         </a>
-                                                       
-                                                        
-                                                     
                                                     </div>
                                                     {{/if}}
                                                 </div>
                                             </div>
                                         </div>
-                                        {{/if}}
+                                    {{else}}
+                                        <div class="hover-overlay">
+                                            <div class="hover-content">
+                                                <div class="hover-header">
+                                                    <h3>{{$boksy[id].text1}}
+                                                        {{if $boksy[id].text2}}<span class="subtitle">{{$boksy[id].text2}}</span>{{/if}}
+                                                    </h3>
+                                                    <div class="hover-description">
+                                                        <p class="default-info">Więcej informacji na stronie obiektu</p>
+                                                    </div>
+                                                </div>
+                                                <div class="hover-footer">
+                                                    {{if $boksy[id].url != ""}}
+                                                    <div class="button-discount-wrapper">
+                                                        <a href="{{$boksy[id].url}}" class="btn btn-primary hover-btn">
+                                                            {{if $boksy[id].text3}}{{$boksy[id].text3}}{{else}}Kup karnet{{/if}}
+                                                        </a>
+                                                    </div>
+                                                    {{/if}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {{/if}}
                                 </div>
                             </div>
                             {{/section}}
