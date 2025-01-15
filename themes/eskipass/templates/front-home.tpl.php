@@ -9,10 +9,10 @@
 
             <div class="content-wrap">
                 <div class="container clearfix">
-                    <div class="row" style="margin-bottom: -100px;">
+                    <div class="row" style="">
                         {{if count($slider) > 0}}
-                        <div class="col-lg-8 col-sm-12 slider-col"> <!-- class before=bottommargin-lg -->
-                            <div class="fslider" data-arrows="false">
+                        <div class="col-lg-12 col-sm-12 slider-col"> <!-- class before=bottommargin-lg -->
+                            <div class="fslider" data-arrows="false" data-direction="horizontal">
                                 <div class="flexslider">
                                     <div class="slider-wrap">
                                         {{section name=id loop=$slider}}
@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         {{/if}}
-                        <div
+                        <!-- <div
                             class="{{if count($slider) > 0}} col-lg-4{{else}} col-lg-12{{/if}} col-sm-12 bottommargin-lg important-blocks">
                             <div class="row">
                                 {{if count($slider_boksy) > 0}}
@@ -43,7 +43,7 @@
                                 {{/section}}
                                 {{/if}}
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="clear"></div>
                 </div>
