@@ -4,16 +4,9 @@ services:
   main_web_eskipass:
     networks:
       - epass2_network
-    dns:
-      - 8.8.8.8
-      - 8.8.4.4
     image: httpd:2.4
     ports:
       - "8080:80"
-    environment:
-      - HTTP_PROXY=http://172.16.2.254:3128
-      - HTTPS_PROXY=http://172.16.2.254:3128
-      - NO_PROXY=localhost,127.0.0.1
     volumes:
       - .:/usr/local/apache2/htdocs:rw
       - ./apache2/my-httpd.conf:/usr/local/apache2/conf/httpd.conf:ro
@@ -26,9 +19,6 @@ services:
   main_php_eskipass:
     networks:
       - epass2_network
-    dns:
-      - 8.8.8.8
-      - 8.8.4.4
     build:
       context: .
       dockerfile: Dockerfile
@@ -39,9 +29,6 @@ services:
       - ./storage/cache:/code/storage/cache:rw
       - ./logs/apache2:/var/log/apache2:rw
     environment:
-      - HTTP_PROXY=http://172.16.2.254:3128
-      - HTTPS_PROXY=http://172.16.2.254:3128
-      - NO_PROXY=localhost,127.0.0.1
       - MYSQL_HOST=${MYSQL_HOST}
       - MYSQL_PORT=${MYSQL_PORT}
       - MYSQL_USER=${MYSQL_USER}
