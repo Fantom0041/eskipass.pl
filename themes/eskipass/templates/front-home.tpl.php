@@ -116,7 +116,8 @@
                                     <div class="fbox-header">
                                         {{if $boksy[id].text1}}
                                         <h3>{{$boksy[id].text1}}
-                                            {{if $boksy[id].text2}}<span class="subtitle">{{$boksy[id].text2}}</span>{{/if}}
+                                            {{if $boksy[id].text2}}<span
+                                                class="subtitle">{{$boksy[id].text2}}</span>{{/if}}
                                         </h3>
                                         {{/if}}
                                         {{if $boksy[id].url != ""}}
@@ -142,102 +143,112 @@
                                         {{/if}}
                                     </div>
                                     {{if $boksy[id].text4}}
-                                        <div class="hover-overlay">
-                                            <div class="hover-content">
-                                                <div class="hover-header">
-                                                    <h3>{{$boksy[id].text1}}
-                                                        {{if $boksy[id].text2}}<span class="subtitle">{{$boksy[id].text2}}</span>{{/if}}
-                                                    </h3>
-                                                    <div class="hover-description">
-                                                        <ul class="hover-list">
-                                                            {{foreach $boksy[id].text4 as $line}}
-                                                            {{if $line|trim != ''}}
-                                                            <li>{{$line|trim}}</li>
-                                                            {{/if}}
-                                                            {{/foreach}}
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="hover-footer">
-                                                    {{if $boksy[id].url != ""}}
-                                                    <div class="button-discount-wrapper">
-                                                        <a href="{{$boksy[id].url}}" class="btn btn-primary hover-btn">
-                                                            {{if $boksy[id].text3}}{{$boksy[id].text3}}{{else}}Kup karnet{{/if}}
-                                                        </a>
-                                                    </div>
-                                                    {{/if}}
+                                    <div class="hover-overlay">
+                                        <div class="hover-content">
+                                            <div class="hover-header">
+                                                <h3>{{$boksy[id].text1}}
+                                                    {{if $boksy[id].text2}}<span
+                                                        class="subtitle">{{$boksy[id].text2}}</span>{{/if}}
+                                                </h3>
+                                                <div class="hover-description">
+                                                    <ul class="hover-list">
+                                                        {{foreach $boksy[id].text4 as $line}}
+                                                        {{if $line|trim != ''}}
+                                                        <li>{{$line|trim}}</li>
+                                                        {{/if}}
+                                                        {{/foreach}}
+                                                    </ul>
                                                 </div>
                                             </div>
+                                            <div class="hover-footer">
+                                                {{if $boksy[id].url != ""}}
+                                                <div class="button-discount-wrapper">
+                                                    <a href="{{$boksy[id].url}}" class="btn btn-primary hover-btn">
+                                                        {{if $boksy[id].text3}}{{$boksy[id].text3}}{{else}}Kup
+                                                        karnet{{/if}}
+                                                    </a>
+                                                </div>
+                                                {{/if}}
+                                            </div>
                                         </div>
+                                    </div>
                                     {{else}}
-                                        <div class="hover-overlay">
-                                            <div class="hover-content">
-                                                <div class="hover-header">
-                                                    <h3>{{$boksy[id].text1}}
-                                                        {{if $boksy[id].text2}}<span class="subtitle">{{$boksy[id].text2}}</span>{{/if}}
-                                                    </h3>
-                                                    <div class="hover-description">
-                                                        <p class="default-info">Więcej informacji na stronie obiektu</p>
-                                                    </div>
-                                                </div>
-                                                <div class="hover-footer">
-                                                    {{if $boksy[id].url != ""}}
-                                                    <div class="button-discount-wrapper">
-                                                        <a href="{{$boksy[id].url}}" class="btn btn-primary hover-btn">
-                                                            {{if $boksy[id].text3}}{{$boksy[id].text3}}{{else}}Kup karnet{{/if}}
-                                                        </a>
-                                                    </div>
-                                                    {{/if}}
+                                    <div class="hover-overlay">
+                                        <div class="hover-content">
+                                            <div class="hover-header">
+                                                <h3>{{$boksy[id].text1}}
+                                                    {{if $boksy[id].text2}}<span
+                                                        class="subtitle">{{$boksy[id].text2}}</span>{{/if}}
+                                                </h3>
+                                                <div class="hover-description">
+                                                    <p class="default-info">Więcej informacji na stronie obiektu</p>
                                                 </div>
                                             </div>
+                                            <div class="hover-footer">
+                                                {{if $boksy[id].url != ""}}
+                                                <div class="button-discount-wrapper">
+                                                    <a href="{{$boksy[id].url}}" class="btn btn-primary hover-btn">
+                                                        {{if $boksy[id].text3}}{{$boksy[id].text3}}{{else}}Kup
+                                                        karnet{{/if}}
+                                                    </a>
+                                                </div>
+                                                {{/if}}
+                                            </div>
                                         </div>
+                                    </div>
                                     {{/if}}
                                 </div>
                             </div>
                             {{/section}}
-{{section name=id loop=$oldboksy}}
-<div data-name="{{$oldboksy[id].text1}}" data-state="{{$oldboksy[id].state}}"
-    class="boks col-lg-4 col-sm-6 col-xs-12 bottommargin">
-    <div class="feature-box center media-box fbox-bg inactive">
-        <div class="fbox-header">
-            {{if $oldboksy[id].text1}}
-            <h3>{{$oldboksy[id].text1}}
-                {{if $oldboksy[id].text2}}<span class="subtitle">{{$oldboksy[id].text2}}</span>{{/if}}
-            </h3>
-            {{/if}}
-        </div>
-        <div class="fbox-media">
-            <img class="resize_img" data-format="16:9"
-                src="{{$siteUrl}}{{$oldboksy[id].img}}" alt="{{$oldboksy[id].text1}}" />
-        </div>
-        <div class="hover-overlay">
-            <div class="hover-content">
-                <div class="hover-header">
-                    <h3>{{$oldboksy[id].text1}}
-                        {{if $oldboksy[id].text2}}<span class="subtitle">{{$oldboksy[id].text2}}</span>{{/if}}
-                    </h3>
-                    {{if $oldboksy[id].text4}}
-                    <div class="hover-description">
-                        <ul class="hover-list">
-                            {{foreach $oldboksy[id].text4 as $line}}
-                            {{if $line|trim != ''}}
-                            <li>{{$line|trim}}</li>
-                            {{/if}}
-                            {{/foreach}}
-                        </ul>
-                    </div>
-                    {{/if}}
-                </div>
-                <div class="hover-footer">
-                    <div class="button-discount-wrapper">
-                       <span class="no-offers-text">BRAK OFERT</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{{/section}}
+                            {{section name=id loop=$oldboksy}}
+                            <div data-name="{{$oldboksy[id].text1}}" data-state="{{$oldboksy[id].state}}"
+                                class="boks col-lg-4 col-sm-6 col-xs-12 bottommargin">
+                                <div class="feature-box center media-box fbox-bg inactive">
+                                    <div class="fbox-header">
+                                        {{if $oldboksy[id].text1}}
+                                        <h3>{{$oldboksy[id].text1}}
+                                            {{if $oldboksy[id].text2}}<span
+                                                class="subtitle">{{$oldboksy[id].text2}}</span>{{/if}}
+                                        </h3>
+                                        {{/if}}
+                                    </div>
+                                    <div class="fbox-media">
+                                        <img class="resize_img" data-format="16:9"
+                                            src="{{$siteUrl}}{{$oldboksy[id].img}}" alt="{{$oldboksy[id].text1}}" />
+                                    </div>
+                                    <div class="hover-overlay">
+                                        <div class="hover-content">
+                                            <div class="hover-header">
+                                                <h3>{{$oldboksy[id].text1}}
+                                                    {{if $oldboksy[id].text2}}<span
+                                                        class="subtitle">{{$oldboksy[id].text2}}</span>{{/if}}
+                                                </h3>
+                                                {{if $oldboksy[id].text4}}
+                                                <div class="hover-description">
+                                                    <ul class="hover-list">
+                                                        {{foreach $oldboksy[id].text4 as $line}}
+                                                        {{if $line|trim != ''}}
+                                                        <li>{{$line|trim}}</li>
+                                                        {{/if}}
+                                                        {{/foreach}}
+                                                    </ul>
+                                                </div>
+                                                {{else}}
+                                                <div class="hover-description">
+                                                    <p class="default-info">Więcej informacji na stronie obiektu</p>
+                                                </div>
+                                                {{/if}}
+                                            </div>
+                                            <div class="hover-footer">
+                                                <div class="button-discount-wrapper">
+                                                    <span class="no-offers-text">BRAK OFERT</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{/section}}
                         </div>
                     </div>
                 </div>
