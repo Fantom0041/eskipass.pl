@@ -98,12 +98,7 @@
                     </div>
                     <div id="boksy" class="container clearfix">
                         <div class="row">
-                            <div class="col-12 mb-4">
-                                <button id="checkVersion" class="btn btn-primary">
-                                    Sprawdź wersję
-                                    <span id="versionStatus" class="version-badge"></span>
-                                </button>
-                            </div>
+                          
 
 
 
