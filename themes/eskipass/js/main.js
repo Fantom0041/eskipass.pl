@@ -327,64 +327,73 @@ $(window).on('resize', function () {
 });
 
 function boksyFilter() {
-    var $elements = $('#boksy').find('.boks');
-    var $tabs = $('#boksy-states-tabs').find('.tab');
+    const searchValue = document.getElementById('boksy-search-input').value.toLowerCase();
+    const $elements = $('#boksy').find('.boks');
+    const $tabs = $('#boksy-states-tabs').find('.tab');
+    
     if ($('#boksy-states-tabs .tab').length > 1) {
         $('#boksy-states-clear-all').show();
-        $elements.each(function (i, a) {
-            var boks = $(this);
-            var flag = 0;
-            $tabs.each(function (j, b) {
-                if ($(this).text() == boks.attr('data-state')) {
+        $elements.each(function() {
+            const $boks = $(this);
+            let flag = 0;
+            
+            $tabs.each(function() {
+                if ($(this).text() === $boks.attr('data-state')) {
                     flag = 1;
                 }
             });
-            if (flag == 1 && $('#boksy-search input').val()) {
-                var name = boks.attr('data-name').toLowerCase();
-                if (name.indexOf($('#boksy-search input').val().toLowerCase()) < 0) {
+            
+            if (flag === 1 && searchValue) {
+                const name = $boks.attr('data-name').toLowerCase();
+                if (!name.includes(searchValue)) {
                     flag = 0;
                 }
             }
-            if (flag == 1) {
-                if (boks.hasClass('hide')) {
-                    boks.removeClass('hide');
-                    boks.addClass('show');
-                    boks.fadeIn(function () {
-                        boks.delay(110).removeClass('show');
-                    });
+            
+            if (flag === 1) {
+                if ($boks.hasClass('hide')) {
+                    $boks.removeClass('hide')
+                         .addClass('show')
+                         .fadeIn(function() {
+                             $(this).delay(110).removeClass('show');
+                         });
                 }
             } else {
-                if (!boks.hasClass('hide')) {
-                    boks.addClass('hide');
-                    boks.removeClass('show');
-                    boks.delay(110).fadeOut();
+                if (!$boks.hasClass('hide')) {
+                    $boks.addClass('hide')
+                         .removeClass('show')
+                         .delay(110)
+                         .fadeOut();
                 }
             }
         });
     } else {
         $('#boksy-states-clear-all').hide();
-        $elements.each(function (i, a) {
-            var boks = $(this);
-            var flag = 1;
-            if ($('#boksy-search input').val()) {
-                var name = boks.attr('data-name').toLowerCase();
-                if (name.indexOf($('#boksy-search input').val().toLowerCase()) < 0) {
+        $elements.each(function() {
+            const $boks = $(this);
+            let flag = 1;
+            
+            if (searchValue) {
+                const name = $boks.attr('data-name').toLowerCase();
+                if (!name.includes(searchValue)) {
                     flag = 0;
                 }
             }
-            if (flag == 1) {
-                if (boks.hasClass('hide')) {
-                    boks.removeClass('hide');
-                    boks.addClass('show');
-                    boks.fadeIn(function () {
-                        boks.delay(110).removeClass('show');
-                    });
+            
+            if (flag === 1) {
+                if ($boks.hasClass('hide')) {
+                    $boks.removeClass('hide')
+                         .addClass('show')
+                         .fadeIn(function() {
+                             $(this).delay(110).removeClass('show');
+                         });
                 }
             } else {
-                if (!boks.hasClass('hide')) {
-                    boks.addClass('hide');
-                    boks.removeClass('show');
-                    boks.delay(110).fadeOut();
+                if (!$boks.hasClass('hide')) {
+                    $boks.addClass('hide')
+                         .removeClass('show')
+                         .delay(110)
+                         .fadeOut();
                 }
             }
         });
@@ -400,4 +409,92 @@ function ResizeImg(img, format, slider) {
         slider.css('height', height + 'px');
         slider.find('.flex-viewport').css('height', height + 'px');
     }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Pobierz elementy
+    const searchInput = document.getElementById('boksy-search-input');
+    const statesList = document.getElementById('boksy-states-list');
+    const sortButton = document.getElementById('boksy-sort');
+    const clearButton = document.getElementById('boksy-states-clear-all');
+
+    // Przywróć zapisane filtry przy ładowaniu strony
+    const savedFilters = JSON.parse(localStorage.getItem('boksyFilters') || '{}');
+    
+    let filtersApplied = false;
+    
+    if (savedFilters.search) {
+        searchInput.value = savedFilters.search;
+        filtersApplied = true;
+    }
+    if (savedFilters.state) {
+        const stateItems = statesList.getElementsByTagName('li');
+        for (let item of stateItems) {
+            if (item.getAttribute('value') === savedFilters.state) {
+                item.setAttribute('selected', '');
+                const tab = document.createElement('span');
+                tab.className = 'tab';
+                tab.textContent = savedFilters.state;
+                document.getElementById('boksy-states-tabs').insertBefore(tab, clearButton);
+                filtersApplied = true;
+            }
+        }
+    }
+    if (savedFilters.sortDir) {
+        sortButton.setAttribute('data-dir', savedFilters.sortDir);
+        updateSortIcon();
+        filtersApplied = true;
+    }
+
+    // Jeśli były jakieś zapisane filtry, zastosuj je od razu
+    if (filtersApplied) {
+        boksyFilter();
+    }
+
+    // Zapisz filtry przy każdej zmianie
+    function saveFilters() {
+        const filters = {
+            search: searchInput.value,
+            state: getSelectedState(),
+            sortDir: sortButton.getAttribute('data-dir')
+        };
+        localStorage.setItem('boksyFilters', JSON.stringify(filters));
+    }
+
+    // Podpięcie eventów zapisywania
+    searchInput.addEventListener('input', saveFilters);
+    statesList.addEventListener('click', saveFilters);
+    sortButton.addEventListener('click', saveFilters);
+    
+    // Czyszczenie filtrów
+    clearButton.addEventListener('click', function() {
+        localStorage.removeItem('boksyFilters');
+    });
+
+    // Pomocnicze funkcje
+    function getSelectedState() {
+        const selected = statesList.querySelector('li[selected]');
+        return selected ? selected.getAttribute('value') : '';
+    }
+
+    function updateSortIcon() {
+        const icon = sortButton.querySelector('.icon');
+        icon.className = 'icon icon-arrow-' + 
+            (sortButton.getAttribute('data-dir') === 'desc' ? 'down' : 'up');
+    }
+});
+
+function filterBoxes() {
+    const searchValue = document.getElementById('boksy-search-input').value.toLowerCase();
+    const selectedState = getSelectedState();
+    const boxes = document.querySelectorAll('.boks');
+    
+    boxes.forEach(box => {
+        const name = box.getAttribute('data-name').toLowerCase();
+        const state = box.getAttribute('data-state');
+        const matchesSearch = name.includes(searchValue);
+        const matchesState = !selectedState || state === selectedState;
+        
+        box.style.display = (matchesSearch && matchesState) ? '' : 'none';
+    });
 }
