@@ -12,21 +12,21 @@
                     <div class="row" style="">
                         {{if count($slider) > 0}}
                         <div class="col-lg-12 col-sm-12 slider-col"> <!-- class before=bottommargin-lg -->
-                            <div class="fslider" data-arrows="false" data-direction="horizontal">
-                                <div class="flexslider">
-                                    <div class="slider-wrap">
-                                        {{section name=id loop=$slider}}
+                            <!-- <div class="fslider" data-arrows="false" data-direction="horizontal"> -->
+                                <!-- <div class="flexslider"> -->
+                                    <!-- <div class="slider-wrap"> -->
+                                        <!-- {{section name=id loop=$slider}} -->
                                         <div class="slide">
                                             <a
                                                 href="{{if $slider[id].url != ""}} {{$slider[id].url}} {{else}} # {{/if}}">
-                                                <img class="resize_img" data-format="4:3"
+                                                <img class="hero-image" data-format="4:3"
                                                     src="{{$siteUrl}}{{$slider[id].img}}" alt="Shop Image">
                                             </a>
                                         </div>
-                                        {{/section}}
-                                    </div>
-                                </div>
-                            </div>
+                                        <!-- {{/section}} -->
+                                    <!-- </div> -->
+                                <!-- </div> -->
+                            <!-- </div> -->
                         </div>
                         {{/if}}
                         <!-- <div

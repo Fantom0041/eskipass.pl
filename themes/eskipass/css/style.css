@@ -13762,3 +13762,12 @@ body:not(.no-transition) #wrapper,
 }
 
 
+.hero-image {
+	width: 100%;
+	height: auto;
+}
+.slide  {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
