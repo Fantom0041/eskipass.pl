@@ -65,8 +65,8 @@
                         <div class="row">
                             <div class="col-lg-1 hidden-md order-lg-1">FILTRUJ</div>
                             <div id="boksy-sort"
-                                class="col-lg-1 col-md-2 col-sm-6 order-lg-2 order-md-2 order-sm-1 order-2 col-12"
-                                data-dir="none">A-Z
+                                class="col-lg-1 col-md-2 col-sm-6 order-lg-2 order-md-2 order-sm-3 order-3">
+                                A-Z
                                 <span class="icon icon-arrow-up"></span>
                             </div>
                             <div id="boksy-state"
@@ -92,6 +92,7 @@
                                 <span class="icon icon-search"></span>
                                 <div id="boksy-search">
                                     <input id="boksy-search-input" class="form-control">
+                                    <span class="icon icon-remove search-clear"></span>
                                 </div>
                             </div>
                         </div>

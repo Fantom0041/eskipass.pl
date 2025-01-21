@@ -417,6 +417,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const statesList = document.getElementById('boksy-states-list');
     const sortButton = document.getElementById('boksy-sort');
     const clearButton = document.getElementById('boksy-states-clear-all');
+    const searchClearButton = document.querySelector('.search-clear');
 
     // Przywróć zapisane filtry przy ładowaniu strony
     const savedFilters = JSON.parse(localStorage.getItem('boksyFilters') || '{}');
@@ -425,6 +426,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (savedFilters.search) {
         searchInput.value = savedFilters.search;
+        searchClearButton.style.display = 'block';
         filtersApplied = true;
     }
     if (savedFilters.state) {
@@ -482,6 +484,21 @@ document.addEventListener('DOMContentLoaded', function() {
         icon.className = 'icon icon-arrow-' + 
             (sortButton.getAttribute('data-dir') === 'desc' ? 'down' : 'up');
     }
+
+    // Pokazuj/ukrywaj przycisk X w zależności od zawartości inputa
+    searchInput.addEventListener('input', function() {
+        searchClearButton.style.display = this.value ? 'block' : 'none';
+        saveFilters();
+        boksyFilter();
+    });
+    
+    // Obsługa kliknięcia przycisku X
+    searchClearButton.addEventListener('click', function() {
+        searchInput.value = '';
+        searchClearButton.style.display = 'none';
+        boksyFilter();
+        saveFilters();
+    });
 });
 
 function filterBoxes() {

@@ -984,3 +984,26 @@
 .default-cta {
     margin-top: 10px;
 }
+
+.search-clear {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+    display: none;
+    z-index: 2;
+}
+
+.search-clear:hover {
+    color: #333;
+}
+
+#boksy-search {
+    position: relative;
+}
+
+#boksy-search-input {
+    padding-right: 30px;
+}
