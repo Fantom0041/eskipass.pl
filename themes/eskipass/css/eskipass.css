@@ -229,7 +229,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    /* transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
     color: white;
     text-align: center;
     opacity: 0;
@@ -237,7 +237,6 @@
     transition: all 0.3s ease-in-out;
     width: 80%;
     padding: 20px;
-    /* transform: translate(-50%, -40%); */
 }
 .eskipass .boks .hover-content p {
     font-size: 16px;
@@ -302,7 +301,7 @@
 
 .eskipass .boks:hover .hover-content {
     opacity: 1;
-    /* transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
 }
 
 .hover-content .hover-list {
@@ -318,7 +317,6 @@
     font-size: 14px;
     line-height: 1.4;
     opacity: 0;
-    /* transform: translateY(10px); */
     transition: all 0.3s ease-in-out;
 }
 
@@ -632,6 +630,7 @@
     margin-top: auto;
 }
 
+
 .eskipass .boks .hover-footer .button-discount-wrapper {
     display: flex;
     align-items: center;
@@ -699,7 +698,6 @@
 .eskipass .feature-box .fbox-header {
     padding: 15px 20px;
     background: #fff;
-    /* border-bottom: 1px solid #E5E5E5; */
 }
 
 .eskipass .feature-box .fbox-header h3 {
@@ -795,12 +793,12 @@
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #000000 !important; /* Wymuszony czarny kolor */
-    background: #ffffff; /* Białe tło */
+    color: #000000 !important;
+    background: #ffffff;
     padding: 5px 10px;
     border-radius: 4px;
     white-space: nowrap;
-    pointer-events: none; /* Zapobiega interakcji z napisem */
+    pointer-events: none;
 }
 
 .feature-box {
@@ -819,7 +817,7 @@
 
 .eskipass .boks .feature-box.inactive {
     
-    pointer-events: none; /* wyłącza możliwość klikania */
+    pointer-events: none;
     cursor: default;
 }
 
@@ -827,7 +825,7 @@
 
 
 .feature-box.inactive .hover-overlay {
-    pointer-events: none; /* Blokuje kliknięcia ale pozwala na hover */
+    pointer-events: none;
 }
 
 
@@ -885,12 +883,12 @@
 }
 
 .eskipass .boks .feature-box.inactive img {
-    filter: grayscale(30%); /* Przyszarzenie obrazka */
+    filter: grayscale(30%);
 }
 
 /* Zachowanie przezroczystości tła dla hover overlay */
 .eskipass .boks .feature-box.inactive .hover-overlay {
-    background: rgba(0, 0, 0, 0.4); /* Zachowujemy przezroczystość */
+    background: rgba(0, 0, 0, 0.4);
 }
 
 /* Styl dla napisu "BRAK OFERT" */
@@ -1006,4 +1004,347 @@
 
 #boksy-search-input {
     padding-right: 30px;
+}
+
+/* Wyrównanie odstępów w boksach */
+.eskipass .boks {
+    margin-bottom: 30px !important;
+    padding: 0 15px;
+}
+
+/* Wyrównanie zawartości wewnątrz boksów */
+.eskipass .feature-box.center.media-box.fbox-bg {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* Wyrównanie nagłówka */
+.eskipass .feature-box .fbox-header {
+    padding: 20px;
+    margin: 0;
+}
+
+/* Wyrównanie kontenera grafiki */
+.eskipass .feature-box .fbox-media {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 0 20px;
+    flex: 1;
+}
+
+/* Style dla samej grafiki */
+.eskipass .feature-box .fbox-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Kontener przycisku pod grafiką */
+.eskipass .feature-box .default-cta {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: auto;
+    text-align: center;
+    margin: 0;
+}
+
+/* Dodatkowy padding na dole kontenera dla przycisku */
+.eskipass .feature-box .fbox-media {
+    padding-bottom: 80px;
+}
+
+/* Wyrównanie hover overlay */
+.eskipass .boks .hover-overlay {
+    padding: 20px;
+}
+
+.eskipass .boks .hover-content {
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+}
+
+/* Wyrównanie elementów w hover */
+.eskipass .boks .hover-header {
+    margin-bottom: 20px;
+}
+
+.eskipass .boks .hover-description {
+    margin: 20px 0;
+}
+
+/* Wyrównanie przycisków */
+.eskipass .feature-box .default-cta {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: auto;
+    text-align: center;
+    margin: 0;
+}
+
+.eskipass .boks .hover-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 3;
+}
+
+.eskipass .boks .hover-footer .button-discount-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.eskipass .boks .hover-btn,
+.eskipass .feature-box .default-cta .btn {
+    width: auto;
+    white-space: nowrap;
+    padding: 12px 25px;
+}
+
+/* Hide default CTA when hovering */
+.eskipass .boks:hover .default-cta {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Ensure hover overlay is above the default CTA */
+.eskipass .boks .hover-overlay {
+    z-index: 2;
+}
+.default-cta {
+    margin-top: 10px;
+}
+
+.search-clear {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+    display: none;
+    z-index: 2;
+}
+
+.search-clear:hover {
+    color: #333;
+}
+
+#boksy-search {
+    position: relative;
+}
+
+#boksy-search-input {
+    padding-right: 30px;
+}
+
+/* Wyrównanie odstępów w boksach */
+.eskipass .boks {
+    margin-bottom: 30px !important;
+    padding: 0 15px;
+}
+
+/* Wyrównanie zawartości wewnątrz boksów */
+.eskipass .feature-box.center.media-box.fbox-bg {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* Wyrównanie nagłówka */
+.eskipass .feature-box .fbox-header {
+    padding: 20px;
+    margin: 0;
+}
+
+/* Wyrównanie kontenera grafiki */
+.eskipass .feature-box .fbox-media {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 0 20px;
+    flex: 1;
+}
+
+/* Style dla samej grafiki */
+.eskipass .feature-box .fbox-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Kontener przycisku pod grafiką */
+.eskipass .feature-box .default-cta {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: auto;
+    text-align: center;
+    margin: 0;
+}
+
+/* Dodatkowy padding na dole kontenera dla przycisku */
+.eskipass .feature-box .fbox-media {
+    padding-bottom: 80px;
+}
+
+/* Wyrównanie hover overlay */
+.eskipass .boks .hover-overlay {
+    padding: 20px;
+}
+
+.eskipass .boks .hover-content {
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+}
+
+/* Wyrównanie elementów w hover */
+.eskipass .boks .hover-header {
+    margin-bottom: 20px;
+}
+
+.eskipass .boks .hover-description {
+    margin: 20px 0;
+}
+
+/* Wyrównanie przycisków */
+.eskipass .feature-box .default-cta {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: auto;
+    text-align: center;
+    margin: 0;
+}
+
+.eskipass .boks .hover-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 3;
+}
+
+.eskipass .boks .hover-footer .button-discount-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.eskipass .boks .hover-btn,
+.eskipass .feature-box .default-cta .btn {
+    width: auto;
+    white-space: nowrap;
+    padding: 12px 25px;
+}
+
+/* Hide default CTA when hovering */
+.eskipass .boks:hover .default-cta {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Ensure hover overlay is above the default CTA */
+.eskipass .boks .hover-overlay {
+    z-index: 2;
+}
+.default-cta {
+    margin-top: 10px;
+}
+
+.search-clear {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+    display: none;
+    z-index: 2;
+}
+
+.search-clear:hover {
+    color: #333;
+}
+
+#boksy-search {
+    position: relative;
+}
+
+#boksy-search-input {
+    padding-right: 30px;
+}
+
+/* Wyrównanie odstępów w rzędach */
+.eskipass #boksy .row {
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Tylko dla tekstu "Więcej informacji na stronie obiektu" */
+.eskipass .boks .default-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+/* Tylko dla kontenera z tekstem "Więcej informacji" */
+.eskipass .boks .hover-description:has(.default-info) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.eskipass .boks .default-info {
+    text-align: center;
+    color: white;
+}
+
+/* Zachowujemy centrowanie dla "Więcej informacji" */
+.eskipass .boks .hover-description:has(.default-info) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.eskipass .boks .default-info {
+    text-align: center;
+    color: white;
+}
+
+/* Dodajemy równe marginesy dla wpisanego tekstu */
+.eskipass .boks .hover-description:not(:has(.default-info)) {
+    margin-left: 20px;
+    margin-right: 20px;
 }
