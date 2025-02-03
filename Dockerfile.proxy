@@ -1,5 +1,14 @@
 FROM php:7.4-fpm
 
+# Set environment variables for proxy
+ENV HTTP_PROXY=http://172.16.2.254:3128
+ENV HTTPS_PROXY=http://172.16.2.254:3128
+ENV NO_PROXY=localhost,127.0.0.1
+
+# Configure proxy and DNS
+RUN echo 'Acquire::http::Proxy "http://172.16.2.254:3128";' > /etc/apt/apt.conf.d/01proxy && \
+    echo "nameserver 8.8.8.8" > /etc/resolv.conf
+
 # Install system dependencies
 RUN apt-get update && \
     apt-get install -qy \
@@ -34,9 +43,12 @@ RUN mkdir -p /usr/local/apache2/logs && \
     chmod -R 777 /usr/local/apache2/run && \
     chmod -R 777 /var/log/apache2
 
+# Configure PEAR and PECL with proxy
+RUN pear config-set http_proxy http://172.16.2.254:3128 || true && \
+    pecl channel-update pecl.php.net || true
 
 # Download and install MongoDB extension manually
-RUN curl -L https://pecl.php.net/get/mongodb-1.15.0.tgz -o mongodb.tgz && \
+RUN curl -x http://172.16.2.254:3128 -L https://pecl.php.net/get/mongodb-1.15.0.tgz -o mongodb.tgz && \
     pecl install mongodb.tgz && \
     rm mongodb.tgz && \
     docker-php-ext-enable mongodb

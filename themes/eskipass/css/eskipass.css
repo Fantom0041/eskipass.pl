@@ -229,7 +229,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    /* transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
     color: white;
     text-align: center;
     opacity: 0;
@@ -237,7 +237,6 @@
     transition: all 0.3s ease-in-out;
     width: 80%;
     padding: 20px;
-    /* transform: translate(-50%, -40%); */
 }
 .eskipass .boks .hover-content p {
     font-size: 16px;
@@ -302,7 +301,7 @@
 
 .eskipass .boks:hover .hover-content {
     opacity: 1;
-    /* transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
 }
 
 .hover-content .hover-list {
@@ -318,7 +317,6 @@
     font-size: 14px;
     line-height: 1.4;
     opacity: 0;
-    /* transform: translateY(10px); */
     transition: all 0.3s ease-in-out;
 }
 
@@ -562,7 +560,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.7);
     opacity: 0;
     transition: all 0.3s ease;
     display: flex;
@@ -632,6 +630,7 @@
     margin-top: auto;
 }
 
+
 .eskipass .boks .hover-footer .button-discount-wrapper {
     display: flex;
     align-items: center;
@@ -641,11 +640,13 @@
 .eskipass .boks .hover-btn {
     background: #1ABC9C;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 4px;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 14px;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .eskipass .boks .hover-btn:hover {
@@ -697,7 +698,6 @@
 .eskipass .feature-box .fbox-header {
     padding: 15px 20px;
     background: #fff;
-    /* border-bottom: 1px solid #E5E5E5; */
 }
 
 .eskipass .feature-box .fbox-header h3 {
@@ -725,6 +725,7 @@
     flex: 1;
     position: relative;
     overflow: hidden;
+    padding-bottom: 90px;
 }
 
 .eskipass .feature-box .fbox-media img {
@@ -792,12 +793,12 @@
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #000000 !important; /* Wymuszony czarny kolor */
-    background: #ffffff; /* Białe tło */
+    color: #000000 !important;
+    background: #ffffff;
     padding: 5px 10px;
     border-radius: 4px;
     white-space: nowrap;
-    pointer-events: none; /* Zapobiega interakcji z napisem */
+    pointer-events: none;
 }
 
 .feature-box {
@@ -816,7 +817,7 @@
 
 .eskipass .boks .feature-box.inactive {
     
-    pointer-events: none; /* wyłącza możliwość klikania */
+    pointer-events: none;
     cursor: default;
 }
 
@@ -824,7 +825,7 @@
 
 
 .feature-box.inactive .hover-overlay {
-    pointer-events: none; /* Blokuje kliknięcia ale pozwala na hover */
+    pointer-events: none;
 }
 
 
@@ -834,9 +835,515 @@
 }
 
 .boks[style*="cursor: default"] .hover-overlay {
-    pointer-events: auto; /* Tylko hover */
+    pointer-events: auto; 
 }
 
 .boks[style*="cursor: default"] a {
     pointer-events: none;
+}
+
+
+.eskipass .boks .hover-overlay {
+    background: rgba(0, 0, 0, 0.4); 
+}
+
+
+.eskipass .boks .no-offers-text {
+    color: #ff4444; 
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+
+.eskipass .boks .hover-btn {
+    background: #1ABC9C;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px; 
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.eskipass .boks .hover-btn:hover {
+    background: #16a085;
+    transform: translateY(-2px);
+}
+
+
+.eskipass .boks .feature-box.inactive {
+    opacity: 0.7; 
+    filter: grayscale(30%); 
+    pointer-events: none; 
+    cursor: default;
+}
+
+.eskipass .boks .feature-box.inactive img {
+    filter: grayscale(30%);
+}
+
+
+.eskipass .boks .feature-box.inactive .hover-overlay {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+.eskipass .boks .no-offers-text {
+    color: #ff4444; 
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    text-transform: uppercase;
+    background: none;
+    border: none; 
+    padding: 0; 
+}
+
+
+.eskipass .feature-box .fbox-media {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Style for the default (non-hover) CTA */
+.eskipass .feature-box .default-cta {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.eskipass .feature-box .default-cta .btn {
+    background-color: #1ABC9C;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.eskipass .feature-box .default-cta .btn:hover {
+    background-color: #16a085;
+    transform: translateY(-2px);
+}
+
+
+.eskipass .boks .hover-footer {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 3;
+}
+
+.eskipass .boks .hover-footer .button-discount-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.eskipass .boks .hover-btn {
+    background: #1ABC9C;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+
+.eskipass .boks:hover .default-cta {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.eskipass .boks .hover-overlay {
+    z-index: 2;
+}
+.default-cta {
+    margin-top: 10px;
+}
+
+.search-clear {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+    display: none;
+    z-index: 2;
+}
+
+.search-clear:hover {
+    color: #333;
+}
+
+#boksy-search {
+    position: relative;
+}
+
+#boksy-search-input {
+    padding-right: 30px;
+}
+
+
+.eskipass .boks {
+    margin-bottom: 30px !important;
+    padding: 0 15px;
+}
+
+
+.eskipass .feature-box.center.media-box.fbox-bg {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+
+.eskipass .feature-box .fbox-header {
+    padding: 20px;
+    margin: 0;
+}
+
+
+.eskipass .feature-box .fbox-media {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 0 20px;
+    flex: 1;
+}
+
+
+.eskipass .feature-box .fbox-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.eskipass .feature-box .default-cta {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: auto;
+    text-align: center;
+    margin: 0;
+}
+
+.eskipass .feature-box .fbox-media {
+    padding-bottom: 80px;
+}
+
+
+.eskipass .boks .hover-overlay {
+    padding: 20px;
+}
+
+.eskipass .boks .hover-content {
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+}
+
+
+.eskipass .boks .hover-header {
+    margin-bottom: 20px;
+}
+
+.eskipass .boks .hover-description {
+    margin: 20px 0;
+}
+
+
+.eskipass .feature-box .default-cta {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: auto;
+    text-align: center;
+    margin: 0;
+}
+
+.eskipass .boks .hover-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 3;
+}
+
+.eskipass .boks .hover-footer .button-discount-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.eskipass .boks .hover-btn,
+.eskipass .feature-box .default-cta .btn {
+    width: auto;
+    white-space: nowrap;
+    padding: 12px 25px;
+}
+
+
+.eskipass .boks:hover .default-cta {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.eskipass .boks .hover-overlay {
+    z-index: 2;
+}
+.default-cta {
+    margin-top: 10px;
+}
+
+.search-clear {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+    display: none;
+    z-index: 2;
+}
+
+.search-clear:hover {
+    color: #333;
+}
+
+#boksy-search {
+    position: relative;
+}
+
+#boksy-search-input {
+    padding-right: 30px;
+}
+
+
+.eskipass .boks {
+    margin-bottom: 30px !important;
+    padding: 0 15px;
+}
+
+
+.eskipass .feature-box.center.media-box.fbox-bg {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+
+.eskipass .feature-box .fbox-header {
+    padding: 20px;
+    margin: 0;
+}
+
+
+.eskipass .feature-box .fbox-media {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 0 20px;
+    flex: 1;
+}
+
+
+.eskipass .feature-box .fbox-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.eskipass .feature-box .default-cta {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: auto;
+    text-align: center;
+    margin: 0;
+}
+
+
+.eskipass .feature-box .fbox-media {
+    padding-bottom: 80px;
+}
+
+
+.eskipass .boks .hover-overlay {
+    padding: 20px;
+}
+
+.eskipass .boks .hover-content {
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+}
+
+
+.eskipass .boks .hover-header {
+    margin-bottom: 20px;
+}
+
+.eskipass .boks .hover-description {
+    margin: 20px 0;
+}
+
+
+.eskipass .feature-box .default-cta {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: auto;
+    text-align: center;
+    margin: 0;
+}
+
+.eskipass .boks .hover-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 3;
+}
+
+.eskipass .boks .hover-footer .button-discount-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.eskipass .boks .hover-btn,
+.eskipass .feature-box .default-cta .btn {
+    width: auto;
+    white-space: nowrap;
+    padding: 12px 25px;
+}
+
+
+.eskipass .boks:hover .default-cta {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.eskipass .boks .hover-overlay {
+    z-index: 2;
+}
+.default-cta {
+    margin-top: 10px;
+}
+
+.search-clear {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+    display: none;
+    z-index: 2;
+}
+
+.search-clear:hover {
+    color: #333;
+}
+
+#boksy-search {
+    position: relative;
+}
+
+#boksy-search-input {
+    padding-right: 30px;
+}
+
+
+.eskipass #boksy .row {
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.eskipass .boks .default-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+
+.eskipass .boks .hover-description:has(.default-info) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.eskipass .boks .default-info {
+    text-align: center;
+    color: white;
+}
+
+
+.eskipass .boks .hover-description:has(.default-info) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.eskipass .boks .default-info {
+    text-align: center;
+    color: white;
+}
+
+
+.eskipass .boks .hover-description:not(:has(.default-info)) {
+    margin-left: 20px;
+    margin-right: 20px;
 }
