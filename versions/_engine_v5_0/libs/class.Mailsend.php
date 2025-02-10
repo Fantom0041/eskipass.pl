@@ -9,7 +9,9 @@ class Mailsend{
 	
 	private static $active = false;
 	private static $en = false;
-	
+
+    public static $error = '';
+
         /**
          * Aktywacja klasy
          */
@@ -81,7 +83,7 @@ class Mailsend{
          * @return boolean
          */
 	public static function SendMessage($subject, $content, $recipent, $sender, $sendername, $method="mail", $conf=array(), $files=array()) {
-		$mailer = new PHPMailer;
+		$mailer = new PHPMailer(true);
 		
 		
 		/** If you're using sendmail or smtp for senting mails, you need to setup mailer using $conf array.
@@ -190,8 +192,9 @@ class Mailsend{
                            "Method: " . $method . "\t" .
                            "Error (phpmailerException): " . $e->getMessage() . "\n";
             @file_put_contents('maile_log.txt', $log_message, FILE_APPEND);
-		    var_dump($e);
-		    die();
+            self::$error = $e->getMessage();
+//		    var_dump($e);
+//		    die();
 			return false;
 		} catch (Exception $e) {
 			$log_message = date('Y-m-d H:i:s') . "\t" .
@@ -200,8 +203,9 @@ class Mailsend{
                            "Method: " . $method . "\t" .
                            "Error (Exception): " . $e->getMessage() . "\n";
             @file_put_contents('maile_log.txt', $log_message, FILE_APPEND);
-            var_dump($e);
-            die();
+            self::$error = $e->getMessage();
+//            var_dump($e);
+//            die();
 			return false;
 		}
 	}

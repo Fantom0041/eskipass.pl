@@ -30,7 +30,8 @@ class Mail extends Main
         require_once ENSETTINGSDIR.'libs/class.Mailsend.php';
         $data = $_POST;
         if (!empty($data)) {
-            $returnMessage = ['Błąd wysyłki wiadomości','danger'];
+//            $returnMessage = ['Błąd wysyłki wiadomości','danger'];
+            $returnMessage = ['Dziękujemy za wiadomość','success'];
             if (array_key_exists('template-contactform-botcheck', $data)) {
                 if ($data['template-contactform-botcheck'] === '') {
                     if (array_key_exists('template-contactform-email', $data) && array_key_exists('template-contactform-message', $data)) {
