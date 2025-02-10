@@ -184,10 +184,22 @@ class Mailsend{
 			return true;
 	
 		} catch (phpmailerException $e) {
+			$log_message = date('Y-m-d H:i:s') . "\t" .
+                           "Subject: " . $subject . "\t" .
+                           "Recipient: " . $recipent . "\t" .
+                           "Method: " . $method . "\t" .
+                           "Error (phpmailerException): " . $e->getMessage() . "\n";
+            @file_put_contents('maile_log.txt', $log_message, FILE_APPEND);
 		    var_dump($e);
 		    die();
 			return false;
 		} catch (Exception $e) {
+			$log_message = date('Y-m-d H:i:s') . "\t" .
+                           "Subject: " . $subject . "\t" .
+                           "Recipient: " . $recipent . "\t" .
+                           "Method: " . $method . "\t" .
+                           "Error (Exception): " . $e->getMessage() . "\n";
+            @file_put_contents('maile_log.txt', $log_message, FILE_APPEND);
             var_dump($e);
             die();
 			return false;
